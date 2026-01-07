@@ -1,13 +1,15 @@
 import { useState } from 'react'
 
+
 import './App.css'
+import TopIndex from './Components/Top/TopIndex'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      
+      <TopIndex />
     </>
   )
 }
