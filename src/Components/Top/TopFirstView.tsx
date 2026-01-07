@@ -5,46 +5,28 @@ const TopFirstView = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="relative">
-      {/* 背景画像 */}
+    // ① 画面サイズを持たせる
+    <section className="relative aspect-[16/9] bg-cover bg-center">
+      {/* ② 背景画像（absolute はここだけ） */}
       <img
         src={TopKv}
         alt="10°cafe"
-        className="absolute inset-0 "
+        className="absolute inset-0 w-full h-full object-cover object-center"
       />
 
-      {/* ナビ */}
-      <nav className="absolute top-0 left-0 z-20 w-full">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 text-white">
-          
-          {/* ロゴ */}
-          <img src={Logo} alt="10°cafe-logo" className="h-6" />
+      {/* ③ オーバーレイ（必要なら） */}
+      <div className="absolute inset-0 bg-black/40" />
 
-          {/* PCメニュー */}
-          <ul className="hidden gap-8 text-sm md:flex">
-            <li>1F</li>
-            <li>2F</li>
-            <li>COWORKING SPACE</li>
-            <li>Coffee Beans</li>
-            <li>RECRUIT</li>
-            <li>CONTACT</li>
-          </ul>
+      {/* ④ header / nav（通常フローに戻す） */}
+      <div className="relative z-20">
+        <nav className="w-full">
+          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 text-white">
+            
+            {/* ロゴ */}
+            <img src={Logo} alt="10°cafe-logo" className="h-6" />
 
-          {/* ハンバーガーボタン（スマホ） */}
-          <button
-            className="md:hidden flex flex-col gap-1"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <span className="block h-[2px] w-6 bg-white"></span>
-            <span className="block h-[2px] w-6 bg-white"></span>
-            <span className="block h-[2px] w-6 bg-white"></span>
-          </button>
-        </div>
-
-        {/* スマホメニュー */}
-        {isOpen && (
-          <div className="md:hidden bg-black/80 text-white">
-            <ul className="flex flex-col items-center gap-6 py-6 text-sm">
+            {/* PCメニュー */}
+            <ul className="hidden gap-8 text-sm md:flex">
               <li>1F</li>
               <li>2F</li>
               <li>COWORKING SPACE</li>
@@ -52,9 +34,33 @@ const TopFirstView = () => {
               <li>RECRUIT</li>
               <li>CONTACT</li>
             </ul>
+
+            {/* ハンバーガー（スマホ） */}
+            <button
+              className="md:hidden flex flex-col gap-1"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <span className="block h-[2px] w-6 bg-white"></span>
+              <span className="block h-[2px] w-6 bg-white"></span>
+              <span className="block h-[2px] w-6 bg-white"></span>
+            </button>
           </div>
-        )}
-      </nav>
+
+          {/* スマホメニュー */}
+          {isOpen && (
+            <div className="md:hidden bg-black/80 text-white">
+              <ul className="flex flex-col items-center gap-6 py-6 text-sm">
+                <li>1F</li>
+                <li>2F</li>
+                <li>COWORKING SPACE</li>
+                <li>Coffee Beans</li>
+                <li>RECRUIT</li>
+                <li>CONTACT</li>
+              </ul>
+            </div>
+          )}
+        </nav>
+      </div>
     </section>
   );
 };
