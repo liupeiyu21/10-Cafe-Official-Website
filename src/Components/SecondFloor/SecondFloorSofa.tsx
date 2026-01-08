@@ -11,10 +11,10 @@ const SecondFloorSofa = () => {
         />
 
         <div className="w-full md:w-1/2">
-          <h2 className="mb-5 text-3xl font-semibold tracking-wide text-[#8C8745]">
+          <h2 className="mb-5 text-[32px] font-bold tracking-wide text-[#8C8745]">
             ソファ席
           </h2>
-          <p className="text-base leading-8 text-black">
+          <p className="text-[18px] leading-8 text-black">
             スタッフが厳選したフリーペーパーを置いています。ぜひ、ご覧になってください。
           </p>
         </div>

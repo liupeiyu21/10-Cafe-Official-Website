@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 type GreenbarProps = {
   active?: "1F" | "2F" | "CWS";
 };
@@ -18,13 +19,13 @@ const Greenbar = ({ active = "1F" }: GreenbarProps) => {
         {/* Labels */}
         <div className="relative z-10 flex w-full text-white">
           <div className="flex w-1/3 items-center justify-center text-lg font-medium">
-            1F
+            <Link to="/firstfloor">1F</Link>
           </div>
           <div className="flex w-1/3 items-center justify-center text-lg font-medium">
-            2F
+            <Link to="/secondfloor">2F</Link>
           </div>
           <div className="flex w-1/3 items-center justify-center text-lg font-medium">
-            CWS
+            <Link to="/coworkingspace">CWS</Link>
           </div>
         </div>
       </div>

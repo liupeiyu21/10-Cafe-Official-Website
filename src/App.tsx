@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import FirstFloorIndex from "./Components/FirstFloor/FirstFloorIndex";
 import SecondFloorIndex from "./Components/SecondFloor/SecondFloorIndex";
+import CoworkingSpaceIndex from "./Components/CoworkingSpace/CoworkingSpaceIndex";
 import "./App.css";
 import TopIndex from "./Components/Top/TopIndex";
 
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<TopIndex />}></Route>
         <Route path="/firstfloor" element={<FirstFloorIndex />}></Route>
         <Route path="/secondfloor" element={<SecondFloorIndex />}></Route>
+        <Route path="/coworkingspace" element={<CoworkingSpaceIndex />}></Route>
       </Routes>
     </>
   );
