@@ -44,7 +44,7 @@ const SecondFloorFirstView = () => {
               <Link to="/secondfloor" className="cursor-pointer">
                 <li>2F</li>
               </Link>
-              <li>COWORKING SPACE</li>
+              <Link to="/coworkingspace">COWORKING SPACE</Link>
               <li>Coffee Beans</li>
               <li>RECRUIT</li>
               <li>CONTACT</li>

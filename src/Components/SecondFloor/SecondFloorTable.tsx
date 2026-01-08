@@ -15,10 +15,10 @@ const SecondFloorTable = () => {
         />
 
         <div className="w-full md:w-1/2">
-          <h2 className="mb-5 text-3xl font-semibold tracking-wide text-[#8C8745]">
+          <h2 className="mb-5 text-[32px] font-bold tracking-wide text-[#8C8745]">
             テーブル席
           </h2>
-          <p className="text-base leading-8 text-black">
+          <p className="text-[18px] leading-8 text-black">
             1人で作業したり、2人でおしゃべり したりできる賑やかな雰囲気のスペ
             ースです。のんびりと作業をされたい 方におすすめです
           </p>
