@@ -1,6 +1,7 @@
 import TopFirstView from "./TopFirstView";
 import TopFooter from "./TopFooter";
 import FloorSection from "./FloorSection";
+import TopMenuSection from "./TopMenuSection";
 
 
 const TopIndex = () => {
@@ -8,6 +9,7 @@ const TopIndex = () => {
         <>
             <TopFirstView />
             <FloorSection />
+            <TopMenuSection />
             <TopFooter />
             
         </>
