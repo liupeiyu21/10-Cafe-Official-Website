@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FirstFloorKv, Logo } from "../../Images";
 import { Link } from "react-router-dom";
 
-const FirstFloorFirstView = () => {
+const SecondFloorFirstView = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -41,7 +41,9 @@ const FirstFloorFirstView = () => {
               <Link to="/firstfloor" className="cursor-pointer">
                 1F
               </Link>
-              <li>2F</li>
+              <Link to="/secondfloor" className="cursor-pointer">
+                <li>2F</li>
+              </Link>
               <li>COWORKING SPACE</li>
               <li>Coffee Beans</li>
               <li>RECRUIT</li>
@@ -78,4 +80,4 @@ const FirstFloorFirstView = () => {
   );
 };
 
-export default FirstFloorFirstView;
+export default SecondFloorFirstView;

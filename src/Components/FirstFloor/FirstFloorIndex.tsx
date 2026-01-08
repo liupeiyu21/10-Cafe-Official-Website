@@ -1,6 +1,6 @@
 import FreePaper from "./FreePaper";
 import Seat from "./Seat";
-import FirstFloorFirstView from "./FirstFloorFastView";
+import FirstFloorFirstView from "./FirstFloorFirstView";
 import Greenbar from "../Greenbar";
 import TopFooter from "../Top/TopFooter";
 const FirstFloorIndex = () => {
