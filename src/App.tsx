@@ -1,17 +1,18 @@
-import { useState } from 'react'
+import { Routes, Route } from "react-router-dom";
+import FirstFloorIndex from "./Components/FirstFloor/FirstFloorIndex";
 
-
-import './App.css'
-import TopIndex from './Components/Top/TopIndex'
+import "./App.css";
+import TopIndex from "./Components/Top/TopIndex";
 
 function App() {
-
-
   return (
     <>
-      <TopIndex />
+      <Routes>
+        <Route path="/firstfloor" element={<FirstFloorIndex />}></Route>
+        <Route path="/" element={<TopIndex />}></Route>
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

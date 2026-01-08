@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { TopKv, Logo } from "../../Images";
-
+import { Link } from "react-router-dom";
 const TopFirstView = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,13 +21,14 @@ const TopFirstView = () => {
       <div className="relative z-20">
         <nav className="w-full">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 text-white">
-            
             {/* ロゴ */}
             <img src={Logo} alt="10°cafe-logo" className="h-6" />
 
             {/* PCメニュー */}
             <ul className="hidden gap-8 text-sm md:flex">
-              <li>1F</li>
+              <Link to="/firstfloor" className="cursor-pointer">
+                1F
+              </Link>
               <li>2F</li>
               <li>COWORKING SPACE</li>
               <li>Coffee Beans</li>
