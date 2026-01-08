@@ -11,3 +11,5 @@ export { default as Seasonal1 } from './Top-swiper1.png';
 export { default as Seasonal2 } from './Top-swiper2.png';
 export { default as Seasonal3 } from './Top-swiper3.png';
 export { default as Seasonal4 } from './Top-swiper4.png';
+export { default as Even1 } from './Top-event1.jpg';
+export { default as Even2 } from './Top-event2.jpg';

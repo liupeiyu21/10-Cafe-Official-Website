@@ -3,6 +3,7 @@ import TopFooter from "./TopFooter";
 import FloorSection from "./FloorSection";
 import TopMenuSection from "./TopMenuSection";
 import TopSeasonalSwiper from "./TopSeasonalSwiper";
+import TopEventSection from "./TopEventSection";
 
 
 const TopIndex = () => {
@@ -12,6 +13,7 @@ const TopIndex = () => {
             <FloorSection />
             <TopMenuSection />
             <TopSeasonalSwiper />
+            <TopEventSection />
             <TopFooter />
             
         </>
