@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { TopKv, Logo } from "../../Images";
-
+import { Link } from "react-router-dom";
 const TopFirstView = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,24 +14,40 @@ const TopFirstView = () => {
       />
       <div className="absolute inset-0 bg-black/40" />
 
+
       {/* ===== ヘッダー ===== */}
-      <header className="relative z-30 bg-white md:bg-transparent">
+       <header className="relative z-30 bg-white md:bg-transparent"></header>
         <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center">
           
           {/* ロゴ（スマホ中央） */}
           <div className="flex-1 flex justify-center  md:justify-start">
             <img src={Logo} alt="logo" className="pl-[40px] h-12" />
           </div>
+  
+            {/* PCメニュー */}
+            <ul className="hidden gap-8 text-sm md:flex">
+              <Link to="/firstfloor" className="cursor-pointer">
+                1F
+              </Link>
+              <li>2F</li>
+              <li>COWORKING SPACE</li>
+              <li>Coffee Beans</li>
+              <li>RECRUIT</li>
+              <li>CONTACT</li>
+            </ul>
+
+
+       
 
           {/* PCメニュー */}
-          <ul className="hidden md:flex gap-8 text-sm text-white">
+          {/* <ul className="hidden md:flex gap-8 text-sm text-white">
             <li>1F</li>
             <li>2F</li>
             <li>COWORKING SPACE</li>
             <li>Coffee Beans</li>
             <li>RECRUIT</li>
             <li>CONTACT</li>
-          </ul>
+          </ul> */}
 
           {/* ハンバーガー */}
           <button
@@ -70,7 +86,7 @@ const TopFirstView = () => {
             <li>CONTACT</li>
           </ul>
         </div>
-      </header>
+      
 
       {/* ===== 中央テキスト ===== */}
       <div className="relative z-20 flex h-full items-center justify-center text-white">
