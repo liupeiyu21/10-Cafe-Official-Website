@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export { default as TopKv } from './Top-kv.png';
 export { default as Logo } from './Cafe-logo.png';
@@ -14,9 +13,8 @@ export { default as Seasonal3 } from './Top-swiper3.png';
 export { default as Seasonal4 } from './Top-swiper4.png';
 export { default as Even1 } from './Top-event1.jpg';
 export { default as Even2 } from './Top-event2.jpg';
-=======
-export { default as TopKv } from "./Top-kv.png";
-export { default as Logo } from "./Cafe-logo.png";
+
+
 export { default as FirstFloorKv } from "./FirstFloor_FirstView.png";
 export { default as FirstFloorSeat1 } from "./FirstFloor_Seat1.jpg";
 export { default as FirstFloorSeat2 } from "./FirstFloor_Seat2.jpg";
@@ -35,4 +33,4 @@ export { default as PriceClock1 } from "./Price_Clock1.svg";
 export { default as PriceClock2 } from "./Price_Clock2.svg";
 export { default as PriceClock3 } from "./Price_Clock3.svg";
 export { default as ManualCharacter } from "./Character.svg";
->>>>>>> ae4d76b2e511e98de6a476fbed2ac8ee47939e9a
+
