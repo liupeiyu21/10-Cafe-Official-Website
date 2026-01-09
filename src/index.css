@@ -1,1 +1,12 @@
+.text-outline {
+  -webkit-text-stroke: 3px #F6F3EE;
+  color: #9C8B52;
+}
+
+
+
+/* Impact 用クラス */
+.font-impact {
+  font-family: impact, sans-serif;
+}
 
