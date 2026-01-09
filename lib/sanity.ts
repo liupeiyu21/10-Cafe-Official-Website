@@ -2,7 +2,7 @@
 import { createClient } from '@sanity/client'
 
 export const sanityClient = createClient({
-  projectId: '5hfywtyp', // ←あなたの Project ID
+  projectId: 'fh72bd6f', // ←あなたの Project ID
   dataset: 'production',
   apiVersion: '2024-01-01',
   useCdn: false,
