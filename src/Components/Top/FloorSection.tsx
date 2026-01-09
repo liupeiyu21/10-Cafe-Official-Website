@@ -7,33 +7,37 @@ const FloorSection = () => {
 
         {/* ===== 1F ===== */}
         
-        <div className="grid items-stretch md:grid-cols-[7.6fr_5fr]">
-          {/* 画像 */}
-          <div className="relative pt-8">
-            <img
-              src={Floor1}
-              alt="1F 横ならび席"
-              className="h-full w-full object-cover"
-            />
-            <span className="absolute top-0 left-0 text-6xl font-bold text-[#8C8745] text-outline">
-              1F
-            </span>
-          </div>
+      <div className="grid items-center grid-cols-[170px_1fr] md:grid-cols-[7.6fr_5fr] ">
+        {/* ===== 画像 ===== */}
+        <div className="relative">
+          <img
+            src={Floor1}
+            alt="1F 横ならび席"
+            className="
+              w-full h-auto object-contain
+              md:h-full md:w-full md:object-cover
+            "
+          />
+          <span className="absolute top-0 left-4 md:left-0 text-4xl md:text-6xl font-bold text-[#8C8745] text-outline">
+            1F
+          </span>
+        </div>
 
-          {/* テキスト */}
-          <div className="flex items-center bg-[#F6F3EE] px-10 md:px-12">
-            <div>
-              <h3 className="mb-10 text-4xl font-semibold text-[#8C8745]">
-                横ならび席
-              </h3>
-              <p className="text-lg leading-relaxed">
-                1人でゆっくりランチをしたり、
-                作業をされたい方におすすめな
-                横並びのお席です。
-              </p>
-            </div>
+        {/* ===== テキスト ===== */}
+        <div className="flex items-center bg-[#F6F3EE] pl-1 pr-4 md:px-12 py-4">
+          <div>
+            <h3 className="mb-4 md:mb-10 text-xl md:text-4xl font-semibold text-[#8C8745]">
+              横ならび席
+            </h3>
+            <p className="text-sm md:text-lg leading-relaxed">
+              1人でゆっくりランチをしたり、
+              作業をされたい方におすすめな
+              横並びのお席です。
+            </p>
           </div>
         </div>
+      </div>
+
         
 
         {/* ===== 2F ===== */}
