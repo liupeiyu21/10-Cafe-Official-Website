@@ -3,7 +3,7 @@ import { ManualCharacter } from "../../Images"; // ← change name if needed
 const Manual = () => {
   return (
     <section className="ml-auto max-w-7xl py-24">
-      <div className="relative rounded-l-3xl rounded-r-none bg-[#F6F4EF] px-8 py-20 md:px-16">
+      <div className="relative rounded-none md:rounded-l-3xl rounded-r-none bg-[#F6F4EF] px-8 py-20 md:px-16">
         {/* Text */}
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-10 text-3xl font-semibold tracking-widest text-[#8C8745]">
@@ -23,7 +23,7 @@ const Manual = () => {
         <img
           src={ManualCharacter}
           alt="10°cafe character"
-          className="absolute bottom-8 right-8 w-32 md:w-40"
+          className="absolute bottom-0 md:bottom-8 right-0 md:right-8 w-32 md:w-40"
         />
       </div>
     </section>
