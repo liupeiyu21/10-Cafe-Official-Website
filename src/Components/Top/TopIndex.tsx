@@ -15,7 +15,7 @@ const TopIndex = () => {
             <FloorSection />
             <TopMenuSection />
             <TopSeasonalSwiper />
-            <TopEventSection />
+            {/* <TopEventSection /> */}
             <TopFooter />
             
         </>
