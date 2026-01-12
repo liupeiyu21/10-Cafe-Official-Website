@@ -14,8 +14,8 @@ export default function TopNews() {
 
       {/* ===== セクションタイトル ===== */}
       <div className="max-w-5xl mx-auto mt-[100px] flex items-center gap-4 text-[#8C8745] pb-14">
-        <span className="block h-[2px] w-20 bg-[#8C8745]" />
-        <h2 className="whitespace-nowrap text-4xl font-medium tracking-widest">
+        <span className="block h-[2px] w-15 md:w-20 bg-[#8C8745]" />
+        <h2 className="whitespace-nowrap text-2xl md:text-4xl font-medium tracking-widest">
           お知らせ
         </h2>
         <span className="block h-[2px] flex-1 bg-[#8C8745]" />
@@ -29,20 +29,24 @@ export default function TopNews() {
             className=" flex flex-col gap-3 py-6 pl-[5%] text-sm md:flex-row md:gap-6"
           >
             {/* 日付 */}
+            
             <p className="w-[120px] text-gray-400 shrink-0">
               {item.date}
             </p>
 
             {/* タイトル */}
-            <h3 className="w-[220px] font-semibold shrink-0">
+            <div className='flex flex-row  justify-start '>
+            <h3 className="w-[120px] font-semibold shrink-0">
               {item.title}
             </h3>
+            
 
             {/* 本文 */}
-            <div className="flex-1 text-gray-700">
+            {/* <div className="flex-1 text-gray-700"> */}
               {item.body && (
                 <PortableText value={item.body} />
               )}
+            {/* </div> */}
             </div>
           </li>
         ))}

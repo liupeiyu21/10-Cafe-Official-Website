@@ -68,6 +68,7 @@ const FloorSection = () => {
             </span>
           </div>
         </div>
+        
 
         {/* ===== 3F ===== */}
         <div className="grid items-stretch md:grid-cols-[7.3fr_5fr]">
