@@ -79,7 +79,7 @@ const TopFirstView = () => {
             10°Cafe
           </h1>
 
-          <p className="my-5 text-4xl tracking-widest">高田馬場店</p>
+          <p className="my-5 text-2xl md:text-4xl tracking-widest">高田馬場店</p>
           <p className="my-8 text-lg md:text-2xl">小さなきっかけ(10°)がそこに</p>
           <p className="text-sm md:text-lg">高田馬場駅から徒歩3分。「人生が、ほんのちょっと(10°)変わるきっかけ」が見つかるお店。</p>
           <p className="text-sm md:text-lg">【全席電源＆wifi完備】でリモートワークなどに最適です。 1.2F:カフェスペース</p>

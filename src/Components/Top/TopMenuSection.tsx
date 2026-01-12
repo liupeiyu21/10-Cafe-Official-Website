@@ -5,8 +5,8 @@ import TopMenuCard from "./TopMenuCard";
 
 const TopMenuSection = () => {
   return (
-    <section className="bg-white py-24">
-      <div className="mx-auto max-w-4xl px-6">
+    <section className="bg-white py-10 md:py-24">
+      <div className="mx-auto max-w-4xl md:px-6">
 
         {/* ===== セクションタイトル ===== */}
       <div className="flex items-center gap-4 text-[#8C8745] pb-10">
@@ -14,7 +14,7 @@ const TopMenuSection = () => {
         <span className="block h-[2px] w-17 bg-[#8C8745]" />
 
         {/* テキスト */}
-        <h2 className="whitespace-nowrap text-4xl font-medium tracking-widest">
+        <h2 className="whitespace-nowrap text-xl md:text-4xl font-medium tracking-widest">
           メニュー
         </h2>
 
