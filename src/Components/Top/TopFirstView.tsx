@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { TopKv, Logo } from "../../Images";
+import { Link } from "react-router-dom";
 
 const TopFirstView = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,9 +26,31 @@ const TopFirstView = () => {
 
           {/* PCメニュー */}
           <ul className="hidden md:flex gap-8 text-sm text-white">
-            <li>1F</li>
-            <li>2F</li>
-            <li>COWORKING SPACE</li>
+            <li>
+              <Link
+                  to="/firstfloor"
+                  className="pb-1 border-b border-transparent hover:border-white transition"
+                >
+                  1F
+              </Link>
+
+            </li>
+            <li>
+              <Link
+                  to="/secondfloor"
+                  className="pb-1 border-b border-transparent hover:border-white transition"
+                >
+                  2F
+              </Link>
+            </li>
+            <li>
+                <Link
+                  to="/coworkingspace"
+                  className="pb-1 border-b border-transparent hover:border-white transition"
+                >
+                  COWORKING SPACE
+              </Link>
+              </li>
             <li>Coffee Beans</li>
             <li>RECRUIT</li>
             <li>CONTACT</li>

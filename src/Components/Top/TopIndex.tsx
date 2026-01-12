@@ -3,7 +3,7 @@ import TopFooter from "./TopFooter";
 import FloorSection from "./FloorSection";
 import TopMenuSection from "./TopMenuSection";
 import TopSeasonalSwiper from "./TopSeasonalSwiper";
-import TopEventSection from "./TopEventSection";
+// import TopEventSection from "./TopEventSection";
 import TopNews from "./TopNews";
 
 
