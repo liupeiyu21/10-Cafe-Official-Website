@@ -14,18 +14,18 @@ export default function TopNews() {
 
       {/* ===== セクションタイトル ===== */}
       <div className='mx-auto max-w-4xl md:px-6 pt-10 md:pt-24'>
-      <div className="flex items-center gap-4 text-[#8C8745] pb-10">
-        {/* 左ライン（短い） */}
-        <span className="block h-[2px] w-17 bg-[#8C8745]" />
+        <div className="flex items-center gap-4 text-[#8C8745] pb-10">
+          {/* 左ライン（短い） */}
+          <span className="block h-[2px] w-17 bg-[#8C8745]" />
 
-        {/* テキスト */}
-        <h2 className="whitespace-nowrap text-xl md:text-4xl font-medium tracking-widest">
-          お知らせ
-        </h2>
+          {/* テキスト */}
+          <h2 className="whitespace-nowrap text-xl md:text-4xl font-medium tracking-widest">
+            お知らせ
+          </h2>
 
-        {/* 右ライン（長い） */}
-        <span className="block h-[2px] flex-1 bg-[#8C8745]" />
-      </div>
+          {/* 右ライン（長い） */}
+          <span className="block h-[2px] flex-1 bg-[#8C8745]" />
+        </div>
       </div>
 
             {/* ===== お知らせ一覧 ===== */}

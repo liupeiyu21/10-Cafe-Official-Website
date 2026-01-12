@@ -13,17 +13,19 @@ import "swiper/css/pagination";
 const TopSeasonalSwiper = () => {
   return (
     <section>
-      <div className="flex items-center gap-4 text-[#8C8745] pb-10 max-w-4xl mx-auto">
-        {/* 左ライン（短い） */}
-        <span className="block h-[2px] w-17 bg-[#8C8745]" />
+      <div className='mx-auto max-w-4xl md:px-6 pt-10 md:pt-24'>
+        <div className="flex items-center gap-4 text-[#8C8745] pb-10 md:pb-24">
+          {/* 左ライン（短い） */}
+          <span className="block h-[2px] w-17 bg-[#8C8745]" />
 
-        {/* テキスト */}
-        <h2 className="whitespace-nowrap text-4xl font-medium tracking-widest">
-          季節限定
-        </h2>
+          {/* テキスト */}
+          <h2 className="whitespace-nowrap text-xl md:text-4xl font-medium tracking-widest">
+            季節限定
+          </h2>
 
-        {/* 右ライン（長い） */}
-        <span className="block h-[2px] flex-1 bg-[#8C8745]" />
+          {/* 右ライン（長い） */}
+          <span className="block h-[2px] flex-1 bg-[#8C8745]" />
+        </div>
       </div>
         <Swiper
         modules={[Navigation, Pagination]}
