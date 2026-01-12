@@ -1,7 +1,7 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Seasonal1, Seasonal2, Seasonal3, Seasonal4 } from "../../Images";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination} from "swiper/modules";
 // @ts-ignore
 import "swiper/css";
 // @ts-ignore
@@ -28,7 +28,12 @@ const TopSeasonalSwiper = () => {
         <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={0}
-        slidesPerView={4}
+        slidesPerView={2}
+        breakpoints={{
+            768: {
+                slidesPerView: 4,
+              },
+        }}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
         navigation={{
