@@ -34,4 +34,5 @@ export { default as PriceClock1 } from "./Price_Clock1.svg";
 export { default as PriceClock2 } from "./Price_Clock2.svg";
 export { default as PriceClock3 } from "./Price_Clock3.svg";
 export { default as ManualCharacter } from "./Character.svg";
+export { default as Tophamburger } from "./Tophamburger.png";
 
