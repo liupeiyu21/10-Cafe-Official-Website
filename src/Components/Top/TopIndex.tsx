@@ -7,6 +7,7 @@ import TopEventSection from "./TopEventSection";
 import TopNews from "./TopNews";
 import TopSeasonalSection from "./TopSeasonalSection";
 import TopAccessSection from "./TopAccessSection";
+import TopSNSLink from "./TopSNSLink";
 
 
 const TopIndex = () => {
@@ -20,6 +21,7 @@ const TopIndex = () => {
             <TopSeasonalSection />
             <TopEventSection />
             <TopAccessSection />
+            <TopSNSLink />
             <TopFooter />
             
         </>
