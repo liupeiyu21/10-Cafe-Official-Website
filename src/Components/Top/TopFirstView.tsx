@@ -21,7 +21,9 @@ const TopFirstView = () => {
           
           {/* ロゴ（スマホ中央） */}
           <div className="flex-1 flex justify-center  md:justify-start">
-            <img src={Logo} alt="logo" className="pl-[40px] h-12" />
+            <Link to="/">
+              <img src={Logo} alt="logo" className="pl-[40px] h-12" />
+            </Link>
           </div>
 
           {/* PCメニュー */}
