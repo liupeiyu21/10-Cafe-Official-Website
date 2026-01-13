@@ -36,10 +36,10 @@ const TopSeasonalSection = () => {
 
           {/* テキスト */}
           <div className="flex-1">
-            <h3 className="mb-6 text-xl md:text-2xl font-semibold text-[#8C8745]">
+            <h3 className="mb-6 text-xl md:text-4xl text-center font-semibold text-[#8C8745]">
               {seasonal.title}
             </h3>
-            <p className="text-sm md:text-base leading-relaxed text-gray-800 whitespace-pre-line">
+            <p className="text-xs md:text-lg leading-relaxed text-gray-800 whitespace-pre-line">
               {seasonal.description}
             </p>
           </div>
