@@ -26,7 +26,7 @@ const TopSeasonalSection = () => {
         <div className="flex flex-col gap-10 md:flex-row md:items-start">
 
           {/* 画像 */}
-          <div className="w-full md:max-w-[300px] px-[5%]">
+          <div className="w-full md:max-w-[40%] px-[5%]">
             <img
               src={urlFor(seasonal.image).width(600).url()}
               alt={seasonal.title}
