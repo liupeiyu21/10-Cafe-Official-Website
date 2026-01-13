@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TopKv, Logo } from "../../Images";
+import { TopKv, Logo, Tophamburger } from "../../Images";
 import { Link } from "react-router-dom";
 
 const TopFirstView = () => {
@@ -21,7 +21,9 @@ const TopFirstView = () => {
           
           {/* ロゴ（スマホ中央） */}
           <div className="flex-1 flex justify-center  md:justify-start">
-            <img src={Logo} alt="logo" className="pl-[40px] h-12" />
+            <Link to="/">
+              <img src={Logo} alt="logo" className="pl-[40px] h-12" />
+            </Link>
           </div>
 
           {/* PCメニュー */}
@@ -81,41 +83,47 @@ const TopFirstView = () => {
 
         {/* ===== スマホメニュー ===== */}
         <div
-          className={`md:hidden absolute top-full left-0 w-full bg-white overflow-hidden transition-all duration-300
-          ${isOpen ? "max-h-96 py-6" : "max-h-0 py-0"}`}
+          className={`md:hidden absolute top-full left-0 w-full bg-[#D8C7A9] overflow-hidden transition-all duration-300 rounded-b-2xl
+          ${isOpen ? "max-h-206 py-6" : "max-h-0 py-0"}`}
         >
-          <ul className="flex flex-col items-center gap-6 text-sm">
+          <ul className="flex flex-col items-start gap-6 text-sm pl-[10%] ">
             <li>
-              <Link to="/firstfloor" onClick={() => setIsOpen(false)}>
+              <Link to="/firstfloor" onClick={() => setIsOpen(false)} className="text-white font-bold">
                 1F
               </Link>
             </li>
             <li>
-              <Link to="/secondfloor" onClick={() => setIsOpen(false)}>
+              <Link to="/secondfloor" onClick={() => setIsOpen(false)} className="text-white font-bold">
                 2F
               </Link>
             </li>
             <li>
-              <Link to="/coworkingspace" onClick={() => setIsOpen(false)}>
+              <Link to="/coworkingspace" onClick={() => setIsOpen(false)} className="text-white font-bold">
                 COWORKING SPACE
               </Link>
             </li>
             <li>
-              <Link to="/beans" onClick={() => setIsOpen(false)}>
+              <Link to="/beans" onClick={() => setIsOpen(false)} className="text-white font-bold">
                 Coffee Beans
               </Link>
             </li>
             <li>
-              <Link to="/recruit" onClick={() => setIsOpen(false)}>
+              <Link to="/recruit" onClick={() => setIsOpen(false)} className="text-white font-bold">
                 RECRUIT
               </Link>
             </li>
             <li>
-              <Link to="/contact" onClick={() => setIsOpen(false)}>
+              <Link to="/contact" onClick={() => setIsOpen(false)} className="text-white font-bold">
                 CONTACT
               </Link>
             </li>
           </ul>
+          <div className="flex justify-end">
+            <img src={Tophamburger} 
+              alt="ハンバーガーメニュー"
+              className="w-[50%] h-[50%] "
+              />
+            </div>
         </div>
       </header>
 

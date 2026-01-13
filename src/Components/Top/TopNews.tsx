@@ -33,11 +33,14 @@ export default function TopNews() {
             {/* ===== お知らせ一覧 ===== */}
       <ul className="max-w-4xl mx-auto ">
         {news.map((item) => (
-          <Link to="/TopNewInformation">
+          
           <li
             key={item._id}
             className=" flex flex-col gap-3 py-2 pl-[4%] text-sm md:flex-row md:gap-6 hover:bg-[#F6F4EF] cursor-pointer"
           >
+          <Link 
+            to="/TopNewInformation"
+            className="flex flex-col gap-3 md:flex-row md:gap-6 w-full cursor-pointer">
             {/* 日付 */}
             
             <p className="w-[120px] text-gray-400 shrink-0">
@@ -58,8 +61,9 @@ export default function TopNews() {
               )}
             {/* </div> */}
             </div>
+            </Link>
           </li>
-          </Link>
+          
         ))}
       </ul>
 
