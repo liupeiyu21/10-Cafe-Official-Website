@@ -2,14 +2,14 @@
 const TopAccessSection = () => {
   return (
 <section className="bg-[#D9C9A6] pt-20 pb-45">
-  <h2 className="text-center text-white text-5xl tracking-widest mb-16">
+  <h2 className="text-center text-white text-xl md:text-4xl tracking-widest md:mb-16">
     ACCESS
   </h2>
 
-  <div className="relative max-w-6xl mx-auto grid md:grid-cols-[2fr_1fr] gap-12 px-6">
+  <div className="relative max-w-6xl mx-auto grid md:grid-cols-[2fr_1fr] gap-10 px-6">
 
     {/* 地図 */}
-    <div className="bg-gray-100 rounded-3xl overflow-hidden shadow-xl h-[500px]">
+    <div className="bg-gray-100 rounded-xl md:rounded-3xl overflow-hidden shadow-xl h-[300px] md:h-[500px]">
       <iframe
         title="10cafe-map"
         src="https://www.google.com/maps?q=10%C2%B0cafe%20%E9%AB%98%E7%94%B0%E9%A6%AC%E5%A0%B4&output=embed"
@@ -26,7 +26,7 @@ const TopAccessSection = () => {
     shadow-2xl
     w-[300px] md:w-[330px]
     md:rotate-15
-    absolute top-30 right-15
+    absolute md:top-30 md:right-15
     ">
 
     {/* テープ */}
