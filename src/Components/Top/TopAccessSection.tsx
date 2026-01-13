@@ -1,7 +1,7 @@
 
 const TopAccessSection = () => {
   return (
-<section className="bg-[#D9C9A6] pt-10 pb-15">
+<section className="bg-[#D9C9A6] pt-10 pb-15 md:pb-45">
   <h2 className="text-center text-white text-xl md:text-4xl tracking-widest mb-10 md:mb-16">
     ACCESS
   </h2>
