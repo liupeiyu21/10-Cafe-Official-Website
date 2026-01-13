@@ -28,8 +28,7 @@ const TopEventSection = () => {
 
           <img src={Even1} alt="イベント現場の写真" />
           <p className="text-sm leading-relaxed">
-            XXXXXXXXXXXX<br />
-            XXXXXXXXXXXX
+            10°CAFE Cultural Event
           </p>
         </div>
 
@@ -38,8 +37,7 @@ const TopEventSection = () => {
 
           <img src={Even2} alt="イベント現場の写真" />
           <p className="text-sm leading-relaxed">
-            XXXXXXXXXXXX<br />
-            XXXXXXXXXXXX
+            10°CAFE Cultural Event
           </p>
         </div>
 
@@ -47,8 +45,7 @@ const TopEventSection = () => {
         <div className="text-center">
             <img src={Even1} alt="イベント現場の写真" />
           <p className="text-sm leading-relaxed">
-            XXXXXXXXXXXX<br />
-            XXXXXXXXXXXX
+            10°CAFE Cultural Event
           </p>
         </div>
 
