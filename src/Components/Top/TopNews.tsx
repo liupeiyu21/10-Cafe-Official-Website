@@ -10,7 +10,7 @@ export default function TopNews() {
   }, [])
 
   return (
-    <section className="pb-10 md:pb-32">
+    <section className="pb-10 md:pb-12">
 
       {/* ===== セクションタイトル ===== */}
       <div className='mx-auto max-w-4xl md:px-6 pt-10 md:pt-24'>
@@ -33,7 +33,7 @@ export default function TopNews() {
         {news.map((item) => (
           <li
             key={item._id}
-            className=" flex flex-col gap-3 py-6 pl-[5%] text-sm md:flex-row md:gap-6"
+            className=" flex flex-col gap-3 py-2 pl-[4%] text-sm md:flex-row md:gap-6"
           >
             {/* 日付 */}
             
