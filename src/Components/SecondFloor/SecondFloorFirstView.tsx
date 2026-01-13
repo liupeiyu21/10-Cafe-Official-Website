@@ -34,7 +34,7 @@ const SecondFloorFirstView = () => {
         <nav className="w-full">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 text-white">
             {/* ロゴ */}
-            <img src={Logo} alt="10°cafe-logo" className="h-6" />
+            <img src={Logo} alt="10°cafe-logo" className="h-12" />
 
             {/* PCメニュー */}
             <ul className="hidden gap-8 text-sm md:flex">

@@ -85,12 +85,36 @@ const TopFirstView = () => {
           ${isOpen ? "max-h-96 py-6" : "max-h-0 py-0"}`}
         >
           <ul className="flex flex-col items-center gap-6 text-sm">
-            <li>1F</li>
-            <li>2F</li>
-            <li>COWORKING SPACE</li>
-            <li>Coffee Beans</li>
-            <li>RECRUIT</li>
-            <li>CONTACT</li>
+            <li>
+              <Link to="/firstfloor" onClick={() => setIsOpen(false)}>
+                1F
+              </Link>
+            </li>
+            <li>
+              <Link to="/secondfloor" onClick={() => setIsOpen(false)}>
+                2F
+              </Link>
+            </li>
+            <li>
+              <Link to="/coworkingspace" onClick={() => setIsOpen(false)}>
+                COWORKING SPACE
+              </Link>
+            </li>
+            <li>
+              <Link to="/beans" onClick={() => setIsOpen(false)}>
+                Coffee Beans
+              </Link>
+            </li>
+            <li>
+              <Link to="/recruit" onClick={() => setIsOpen(false)}>
+                RECRUIT
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={() => setIsOpen(false)}>
+                CONTACT
+              </Link>
+            </li>
           </ul>
         </div>
       </header>

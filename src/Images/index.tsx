@@ -16,6 +16,7 @@ export { default as Even2 } from './Top-event2.jpg';
 
 
 export { default as FirstFloorKv } from "./FirstFloor_FirstView.png";
+export { default as FirstFloor1F } from "./FirstFloor_1F.png";
 export { default as FirstFloorSeat1 } from "./FirstFloor_Seat1.jpg";
 export { default as FirstFloorSeat2 } from "./FirstFloor_Seat2.jpg";
 export { default as FirstFloorSeat3 } from "./FirstFloor_Seat3.jpg";
