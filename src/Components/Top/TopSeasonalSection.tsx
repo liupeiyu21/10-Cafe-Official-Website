@@ -21,12 +21,12 @@ const TopSeasonalSection = () => {
   if (!seasonal) return null;
 
   return (
-    <section className="bg-[#F6F4EF] py-20">
+    <section className="bg-[#F6F4EF] py-10">
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex flex-col gap-10 md:flex-row md:items-start">
 
           {/* 画像 */}
-          <div className="w-full max-w-[260px] md:max-w-[300px]">
+          <div className="w-full md:max-w-[300px] px-[5%]">
             <img
               src={urlFor(seasonal.image).width(600).url()}
               alt={seasonal.title}
