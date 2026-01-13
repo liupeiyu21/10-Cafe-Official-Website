@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FirstFloorKv, Logo } from "../../Images";
+import { FirstFloor1F, FirstFloorKv, Logo } from "../../Images";
 import { Link } from "react-router-dom";
 
 const FirstFloorFirstView = () => {
@@ -34,8 +34,8 @@ const FirstFloorFirstView = () => {
         <nav className="w-full">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 text-white">
             {/* ロゴ */}
-            <img src={Logo} alt="10°cafe-logo" className="h-6" />
-
+            <Link to="/"><img src={Logo} alt="10°cafe-logo" className="h-12" /></Link>
+           
             {/* PCメニュー */}
             <ul className="hidden gap-8 text-sm md:flex">
               <Link to="/firstfloor" className="cursor-pointer">
@@ -67,15 +67,40 @@ const FirstFloorFirstView = () => {
           {isOpen && (
             <div className="bg-black/80 text-white md:hidden">
               <ul className="flex flex-col items-center gap-6 py-6 text-sm">
-                <li>1F</li>
-                <li>2F</li>
-                <li>COWORKING SPACE</li>
-                <li>Coffee Beans</li>
-                <li>RECRUIT</li>
-                <li>CONTACT</li>
+                <li>
+                  <Link to="/firstfloor" onClick={() => setIsOpen(false)}>
+                    1F
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/secondfloor" onClick={() => setIsOpen(false)}>
+                    2F
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/coworkingspace" onClick={() => setIsOpen(false)}>
+                    COWORKING SPACE
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/beans" onClick={() => setIsOpen(false)}>
+                    Coffee Beans
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/recruit" onClick={() => setIsOpen(false)}>
+                    RECRUIT
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" onClick={() => setIsOpen(false)}>
+                    CONTACT
+                  </Link>
+                </li>
               </ul>
             </div>
           )}
+
         </nav>
       </div>
     </section>

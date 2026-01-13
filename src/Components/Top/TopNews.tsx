@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { PortableText } from '@portabletext/react'
 import { getNews } from '../../../lib/sanity'
+import { Link } from 'react-router-dom'
+
 
 export default function TopNews() {
   const [news, setNews] = useState<any[]>([])
@@ -10,7 +12,7 @@ export default function TopNews() {
   }, [])
 
   return (
-    <section className="pb-10 md:pb-32">
+    <section className="pb-10 md:pb-12">
 
       {/* ===== セクションタイトル ===== */}
       <div className='mx-auto max-w-4xl md:px-6 pt-10 md:pt-24'>
@@ -31,9 +33,10 @@ export default function TopNews() {
             {/* ===== お知らせ一覧 ===== */}
       <ul className="max-w-4xl mx-auto ">
         {news.map((item) => (
+          <Link to="/TopNewInformation">
           <li
             key={item._id}
-            className=" flex flex-col gap-3 py-6 pl-[5%] text-sm md:flex-row md:gap-6"
+            className=" flex flex-col gap-3 py-2 pl-[4%] text-sm md:flex-row md:gap-6 hover:bg-[#F6F4EF] cursor-pointer"
           >
             {/* 日付 */}
             
@@ -56,6 +59,7 @@ export default function TopNews() {
             {/* </div> */}
             </div>
           </li>
+          </Link>
         ))}
       </ul>
 

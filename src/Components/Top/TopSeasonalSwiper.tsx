@@ -56,7 +56,7 @@ const TopSeasonalSwiper = () => {
         </Swiper>
 
         {/* ナビゲーション */}
-        <div className="relative mt-10 h-10">
+        <div className="relative my-5 h-10">
             <div className="absolute left-1/2 flex -translate-x-1/2 items-center gap-6 text-[#8C8745]">
                 
                 {/* 前 */}

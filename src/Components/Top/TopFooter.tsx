@@ -6,16 +6,16 @@ const TopFooter = () => {
       <div className="mx-auto max-w-6xl px-6 py-16">
 
         {/* ロゴ */}
-        <div className="mb-10 flex justify-center">
+        <div className="mb-12 flex justify-center">
           <img
             src={Logo}
             alt="10°CAFE"
-            className="h-10"
+            className="h-12"
           />
         </div>
 
         {/* ナビ */}
-        <nav className="mb-12  md:flex">
+        <nav className="mb-12 flex justify-center md:flex">
           <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm tracking-widest">
             <li className="hover:opacity-60 cursor-pointer">1F</li>
             <li className="hover:opacity-60 cursor-pointer">2F</li>

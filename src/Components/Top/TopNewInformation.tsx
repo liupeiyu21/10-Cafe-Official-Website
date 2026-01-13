@@ -1,23 +1,18 @@
 import { useState } from "react";
-import { TopKv, Logo } from "../../Images";
+import { Logo } from "../../Images";
 import { Link } from "react-router-dom";
 
-const TopFirstView = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  return (
+const TopNewInformation = () => {
+      const [isOpen, setIsOpen] = useState(false);
+    return (
     <section className="relative h-screen overflow-hidden">
-      {/* 背景 */}
-      <img
-        src={TopKv}
-        alt="10°cafe"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      <div className="absolute inset-0 bg-black/40" />
+
+      <div className="absolute inset-0" />
 
       {/* ===== ヘッダー ===== */}
-      <header className="relative z-30 bg-white md:bg-transparent">
-        <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center">
+      <header className="relative z-30 bg-[#030303]">
+        <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center border-b-1 border-white">
           
           {/* ロゴ（スマホ中央） */}
           <div className="flex-1 flex justify-center  md:justify-start">
@@ -63,17 +58,17 @@ const TopFirstView = () => {
           >
             {/* 上 */}
             <span
-              className={`absolute h-[2px] w-8 bg-black transition-all duration-300
+              className={`absolute h-[2px] w-8 bg-white transition-all duration-300
               ${isOpen ? "rotate-45 top-1/2" : "top-2"}`}
             />
             {/* 中 */}
             <span
-              className={`absolute h-[2px] w-6 bg-black transition-all duration-300 left-1
+              className={`absolute h-[2px] w-6 bg-white transition-all duration-300 left-1
               ${isOpen ? "opacity-0" : "top-1/2"}`}
             />
             {/* 下 */}
             <span
-              className={`absolute h-[2px] w-8 bg-black transition-all duration-300
+              className={`absolute h-[2px] w-8 bg-white transition-all duration-300
               ${isOpen ? "-rotate-45 top-1/2" : "bottom-2"}`}
             />
           </button>
@@ -81,36 +76,36 @@ const TopFirstView = () => {
 
         {/* ===== スマホメニュー ===== */}
         <div
-          className={`md:hidden absolute top-full left-0 w-full bg-white overflow-hidden transition-all duration-300
+          className={`md:hidden absolute top-full left-0 w-full bg-[#030303] overflow-hidden transition-all duration-300
           ${isOpen ? "max-h-96 py-6" : "max-h-0 py-0"}`}
         >
           <ul className="flex flex-col items-center gap-6 text-sm">
-            <li>
+            <li className="text-white">
               <Link to="/firstfloor" onClick={() => setIsOpen(false)}>
                 1F
               </Link>
             </li>
-            <li>
+            <li className="text-white">
               <Link to="/secondfloor" onClick={() => setIsOpen(false)}>
                 2F
               </Link>
             </li>
-            <li>
+            <li className="text-white">
               <Link to="/coworkingspace" onClick={() => setIsOpen(false)}>
                 COWORKING SPACE
               </Link>
             </li>
-            <li>
+            <li className="text-white">
               <Link to="/beans" onClick={() => setIsOpen(false)}>
                 Coffee Beans
               </Link>
             </li>
-            <li>
+            <li className="text-white">
               <Link to="/recruit" onClick={() => setIsOpen(false)}>
                 RECRUIT
               </Link>
             </li>
-            <li>
+            <li className="text-white">
               <Link to="/contact" onClick={() => setIsOpen(false)}>
                 CONTACT
               </Link>
@@ -119,22 +114,13 @@ const TopFirstView = () => {
         </div>
       </header>
 
-      {/* ===== 中央テキスト ===== */}
-      <div className="relative z-20 flex h-full items-center justify-center text-white">
-        <div className="text-center px-6 -translate-y-15 md:-translate-y-16">
-          <h1 className="font-impact text-6xl md:text-9xl font-extrabold">
-            10°Cafe
-          </h1>
-
-          <p className="my-5 text-2xl md:text-4xl tracking-widest">高田馬場店</p>
-          <p className="my-8 text-lg md:text-2xl">小さなきっかけ(10°)がそこに</p>
-          <p className="text-sm md:text-lg">高田馬場駅から徒歩3分。「人生が、ほんのちょっと(10°)変わるきっかけ」が見つかるお店。</p>
-          <p className="text-sm md:text-lg">【全席電源＆wifi完備】でリモートワークなどに最適です。 1.2F:カフェスペース</p>
-          <p className="text-sm md:text-lg">3F:コワーキングスペースとなっており、個室でより集中できる空間をご利用いただけます。</p>
-        </div>
+      <div>
+        <h1 className="mt-32 text-center text-[#8C8745] text-3xl font-semibold">お知らせ</h1>
+        <p className="mt-8 mx-auto max-w-4xl px-6 text-center text-sm leading-7">
+        </p>   
       </div>
     </section>
-  );
-};
+    );
+}
 
-export default TopFirstView;
+export default TopNewInformation;
