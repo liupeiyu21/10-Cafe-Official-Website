@@ -50,7 +50,7 @@ const TopAccessSection = () => {
 
     <h4 className="font-bold">営業時間</h4>
 
-    <div className="mt-4 space-y-3 text-sm leading-relaxed">
+    <div className="mt-6 space-y-3 text-sm leading-relaxed">
         <p className="font-semibold">CAFE</p>
         <p>【月〜木】9:00〜20:30（L.O.20:00）</p>
         <p>【金・土】9:00〜23:30（L.O.23:00）</p>
@@ -62,7 +62,7 @@ const TopAccessSection = () => {
         <p>【日】11:00〜21:00（L.O.20:00）</p>
     </div>
 
-    <p className="mt-2 text-sm text-gray-500">
+    <p className="mt-10 text-sm text-gray-500">
         〒171-0033 東京都豊島区高田3丁目12-8
     </p>
     </div>
