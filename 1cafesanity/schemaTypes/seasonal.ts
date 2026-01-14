@@ -2,7 +2,7 @@ import { defineType, defineField } from "sanity";
 
 export default defineType({
   name: "seasonal",
-  title: "季節限定コンテンツ",
+  title: "今月のCraft Drink",
   type: "document",
   fields: [
     defineField({
