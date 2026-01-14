@@ -32,41 +32,57 @@ export default function TopNews() {
 
             {/* ===== お知らせ一覧 ===== */}
       <ul className="max-w-4xl mx-auto ">
-        {news.map((item) => (
-          
-          <li
-            key={item._id}
-            className=" flex flex-col gap-3 py-2 pl-[4%] text-sm md:flex-row md:gap-6 hover:bg-[#F6F4EF] cursor-pointer"
-          >
-          <Link 
-            to="/TopNewInformation"
-            className="flex flex-col gap-3 md:flex-row md:gap-6 w-full cursor-pointer">
-            {/* 日付 */}
-            
-            <p className="w-[120px] text-gray-400 shrink-0">
-              {item.date}
-            </p>
+        {news.map((item) => {
+          if (!item.slug?.current) return null; // ← 追加（超重要）
 
-            {/* タイトル */}
-            <div className='flex flex-row  justify-start '>
-            <h3 className="w-[120px] font-semibold shrink-0">
-              {item.title}
-            </h3>
-            
+          return (
+            <li
+              key={item._id}
+              className="flex flex-col gap-3 py-2 pl-[4%] text-sm md:flex-row md:gap-6 hover:bg-[#F6F4EF]"
+            >
+              <Link
+                to={`/news/${item.slug.current}`}   // ← } 修正
+                className="flex flex-col gap-3 md:flex-row md:gap-6 w-full cursor-pointer"
+              >
+                <p className="w-[120px] text-gray-400 shrink-0">
+                  {item.date}
+                </p>
 
-            {/* 本文 */}
-            {/* <div className="flex-1 text-gray-700"> */}
-              {item.body && (
-                <PortableText value={item.body} />
-              )}
-            {/* </div> */}
-            </div>
-            </Link>
-          </li>
-          
-        ))}
+                <div className="flex flex-row justify-start">
+                  <h3 className="w-[100%] font-semibold shrink-0">
+                    {item.title}
+                  </h3>
+
+                  {/* {item.body && <PortableText value={item.body} />} */}
+                </div>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
-
+      <Link to="/newsList">
+        <button
+          className="
+            mt-16
+            mx-auto
+            block
+            px-10
+            py-3
+            text-sm
+            tracking-widest
+            text-[#8C8745]
+            border
+            border-[#8C8745]
+            rounded-full
+            transition
+            duration-300
+            hover:bg-[#8C8745]
+            hover:text-white
+          "
+        >
+          お知らせ一覧
+        </button>
+      </Link>
 
     </section>
   )

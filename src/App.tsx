@@ -4,7 +4,8 @@ import SecondFloorIndex from "./Components/SecondFloor/SecondFloorIndex";
 import CoworkingSpaceIndex from "./Components/CoworkingSpace/CoworkingSpaceIndex";
 import "./App.css";
 import TopIndex from "./Components/Top/TopIndex";
-import TopNewInformation from "./Components/Top/TopNewInformation";
+import TopNewInformation from "./Components/Top/TopNewsDetail";
+import NewsList from "./Components/Top/NewsList";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Route path="/firstfloor" element={<FirstFloorIndex />}></Route>
         <Route path="/secondfloor" element={<SecondFloorIndex />}></Route>
         <Route path="/coworkingspace" element={<CoworkingSpaceIndex />}></Route>
-        <Route path="/TopNewInformation" element={<TopNewInformation />}></Route>
+        <Route path="/news/:slug" element={<TopNewInformation />}></Route>
+        <Route path="/newslist" element={<NewsList />}></Route>
       </Routes>
     </>
   );
