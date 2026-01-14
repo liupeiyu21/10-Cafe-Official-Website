@@ -1,38 +1,17 @@
-import { useState,useEffect } from "react";
-import { Logo } from "../../Images";
-import { Link, useParams } from "react-router-dom";
-// import { useParams } from "react-router-dom";
-import { PortableText } from "@portabletext/react";
-import { getNewsBySlug } from "../../../lib/sanity";
-import TopSNSLinks from "./TopSNSLinks";
-import TopFooter from "./TopFooter";
-// import TopAccessSection from "./TopAccessSection";
+import { MenuHero as MenuHeroImage } from "../../../Images";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Logo } from "../../../Images";
 
+const MenuHero = ({ title }: { title: string }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-
-
-const TopNewsDetail = () => {
-      const [isOpen, setIsOpen] = useState(false);
-      const { slug } = useParams();
-      const [news, setNews] = useState<any>(null);
-
-      useEffect(() => {
-        if (!slug) return;
-        getNewsBySlug(slug).then(setNews);
-      }, [slug]);
-
-
-
-      
-    return (
-      <>
-        <section className="relative h-screen overflow-hidden">
-
-
-
+  return (
+    <>
+        <div className="">
           {/* ===== ヘッダー ===== */}
-          <header className="relative z-30 bg-[#030303]">
-            <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center border-b-1 border-white">
+          <header className="fixed top-0 left-0 z-50 w-full bg-[#8C8745]">
+            <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center">
               
               {/* ロゴ（スマホ中央） */}
               <div className="flex-1 flex justify-center  md:justify-start">
@@ -134,40 +113,31 @@ const TopNewsDetail = () => {
               </ul>
             </div>
           </header>
-          
-          <div>
-            <h1 className="mt-32 text-center text-[#8C8745] text-3xl font-semibold">
-              お知らせ
-            </h1>
-
-            {/* ===== 追加：お知らせ本文 ===== */}
-            {news && (
-              <div className="mt-10 mx-auto max-w-3xl px-6">
-                {/* タイトル */}
-                <h2 className="text-2xl font-semibold mb-2">
-                  {news.title}
-                </h2>
-
-                {/* 日付 */}
-                <p className="text-sm text-gray-400 mb-8">
-                  {news.date}
-                </p>
-
-                {/* 本文 */}
-                <div className="prose max-w-none">
-                  <PortableText value={news.body} />
-                </div>
-            </div>
-            )}
-        </div>
-        </section>
-       {/* <TopAccessSection /> */}
-       <TopSNSLinks />
-       <TopFooter />
+      
 
         
-    </>
-    );
-}
+            <section className="relative w-full overflow-hidden">
+            
+            {/* 背景画像（波形） */}
+            <img
+                src={MenuHeroImage}
+                alt="menu hero background"
+                className="absolute inset-0 h-full w-full object-cover"
+            />
 
-export default TopNewsDetail;
+            {/* 文字レイヤー */}
+            <div className="relative z-10 px-6 py-24 md:py-32">
+                <h1 className="text-4xl md:text-6xl font-medium tracking-wide text-white">
+                {title}
+                </h1>
+            </div>
+
+            </section>
+        </div>
+    </>
+  );
+};
+
+export default MenuHero;
+
+

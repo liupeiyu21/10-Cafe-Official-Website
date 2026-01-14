@@ -1,4 +1,5 @@
 import { Logo } from "../../Images";
+import { Link } from "react-router-dom";
 
 const TopFooter = () => {
   return (
@@ -7,11 +8,13 @@ const TopFooter = () => {
 
         {/* ロゴ */}
         <div className="mb-12 flex justify-center">
+        <Link to="/">
           <img
-            src={Logo}
-            alt="10°CAFE"
-            className="h-12"
-          />
+              src={Logo}
+              alt="10°CAFE"
+              className="h-12"
+            />
+          </Link>
         </div>
 
         {/* ナビ */}
