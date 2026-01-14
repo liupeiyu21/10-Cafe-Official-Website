@@ -6,6 +6,7 @@ import "./App.css";
 import TopIndex from "./Components/Top/TopIndex";
 import TopNewInformation from "./Components/Top/TopNewsDetail";
 import NewsList from "./Components/Top/NewsList";
+import ScrollToTop from "./Components/Common/ScrollToTop";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/news/:slug" element={<TopNewInformation />}></Route>
         <Route path="/newslist" element={<NewsList />}></Route>
       </Routes>
+       <ScrollToTop />
     </>
   );
 }
