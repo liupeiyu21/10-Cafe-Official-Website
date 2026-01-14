@@ -4,6 +4,10 @@ import { Link, useParams } from "react-router-dom";
 // import { useParams } from "react-router-dom";
 import { PortableText } from "@portabletext/react";
 import { getNewsBySlug } from "../../../lib/sanity";
+import TopSNSLinks from "./TopSNSLinks";
+import TopFooter from "./TopFooter";
+// import TopAccessSection from "./TopAccessSection";
+
 
 
 
@@ -24,7 +28,7 @@ const TopNewsDetail = () => {
       <>
         <section className="relative h-screen overflow-hidden">
 
-          <div className="absolute inset-0" />
+
 
           {/* ===== ヘッダー ===== */}
           <header className="relative z-30 bg-[#030303]">
@@ -130,34 +134,36 @@ const TopNewsDetail = () => {
               </ul>
             </div>
           </header>
-                  <div>
-          <h1 className="mt-32 text-center text-[#8C8745] text-3xl font-semibold">
-            お知らせ
-          </h1>
+          
+          <div>
+            <h1 className="mt-32 text-center text-[#8C8745] text-3xl font-semibold">
+              お知らせ
+            </h1>
 
-          {/* ===== 追加：お知らせ本文 ===== */}
-          {news && (
-            <div className="mt-10 mx-auto max-w-3xl px-6">
-              {/* タイトル */}
-              <h2 className="text-2xl font-semibold mb-2">
-                {news.title}
-              </h2>
+            {/* ===== 追加：お知らせ本文 ===== */}
+            {news && (
+              <div className="mt-10 mx-auto max-w-3xl px-6">
+                {/* タイトル */}
+                <h2 className="text-2xl font-semibold mb-2">
+                  {news.title}
+                </h2>
 
-              {/* 日付 */}
-              <p className="text-sm text-gray-400 mb-8">
-                {news.date}
-              </p>
+                {/* 日付 */}
+                <p className="text-sm text-gray-400 mb-8">
+                  {news.date}
+                </p>
 
-              {/* 本文 */}
-              <div className="prose max-w-none">
-                <PortableText value={news.body} />
-              </div>
+                {/* 本文 */}
+                <div className="prose max-w-none">
+                  <PortableText value={news.body} />
+                </div>
             </div>
-          )}
+            )}
         </div>
         </section>
-
-
+       {/* <TopAccessSection /> */}
+       <TopSNSLinks />
+       <TopFooter />
 
         
     </>

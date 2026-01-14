@@ -1,48 +1,17 @@
-import { useEffect, useState } from "react";
+import { MenuHero as MenuHeroImage } from "../../../Images";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { getNewsList, getNewsCount } from "../../../lib/sanity";
-import TopFooter from "./TopFooter";
-import TopSNSLinks from "./TopSNSLinks";
-import { Logo } from "../../Images";
+import { Logo } from "../../../Images";
 
-
-type NewsItem = {
-  _id: string;
-  title: string;
-  date: string;
-  slug: {
-    current: string;
-  };
-};
-
-const PER_PAGE = 10;
-
-const NewsList = () => {
-  const [news, setNews] = useState<NewsItem[]>([]);
-  const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
+const MenuHero = ({ title }: { title: string }) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    // 現在ページの記事取得
-    getNewsList(page).then(setNews);
-
-    // 総件数 → ページ数計算
-    getNewsCount().then((count: number) => {
-      setTotalPages(Math.ceil(count / PER_PAGE));
-    });
-  }, [page]);
 
   return (
     <>
-
-
-
-        
-
+        <div className="">
           {/* ===== ヘッダー ===== */}
-          <header className="relative z-30 bg-[#030303]">
-            <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center border-b-1 border-white">
+          <header className="fixed top-0 left-0 z-50 w-full bg-[#8C8745]">
+            <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center">
               
               {/* ロゴ（スマホ中央） */}
               <div className="flex-1 flex justify-center  md:justify-start">
@@ -144,82 +113,31 @@ const NewsList = () => {
               </ul>
             </div>
           </header>
-          <div>  
+      
+
+        
+            <section className="relative w-full overflow-hidden">
+            
+            {/* 背景画像（波形） */}
+            <img
+                src={MenuHeroImage}
+                alt="menu hero background"
+                className="absolute inset-0 h-full w-full object-cover"
+            />
+
+            {/* 文字レイヤー */}
+            <div className="relative z-10 px-6 py-24 md:py-32">
+                <h1 className="text-4xl md:text-6xl font-medium tracking-wide text-white">
+                {title}
+                </h1>
+            </div>
+
+            </section>
         </div>
-       
-
-      <section className="mx-auto max-w-4xl px-6 py-24">
-        {/* ===== タイトル ===== */}
-        <div className="mb-16 flex items-center gap-6 text-[#8C8745]">
-          <span className="h-[2px] w-12 bg-[#8C8745]" />
-          <h1 className="text-3xl font-medium tracking-widest">お知らせ</h1>
-          <span className="h-[2px] flex-1 bg-[#8C8745]" />
-        </div>
-
-        {/* ===== お知らせ一覧 ===== */}
-        <ul className="divide-y">
-          {news.map((item) => (
-            <li key={item._id} className="py-6">
-              <Link
-                to={`/news/${item.slug.current}`}
-                className="flex flex-col gap-2 md:flex-row md:items-center md:gap-8 hover:opacity-70"
-              >
-                {/* 日付 */}
-                <time className="w-32 text-sm text-gray-400">
-                  {item.date}
-                </time>
-
-                {/* タイトル */}
-                <p className="font-semibold text-black">
-                  {item.title}
-                </p>
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        {/* ===== ページネーション ===== */}
-        <div className="mt-20 flex justify-center gap-3">
-          {/* 前へ */}
-          <button
-            onClick={() => setPage((p) => Math.max(p - 1, 1))}
-            disabled={page === 1}
-            className="h-10 w-10 rounded-full border text-lg disabled:opacity-30"
-          >
-            ‹
-          </button>
-
-          {/* ページ番号（Sanity件数連動） */}
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
-            <button
-              key={p}
-              onClick={() => setPage(p)}
-              className={`h-10 w-10 rounded-full border text-sm transition
-                ${
-                  page === p
-                    ? "border-[#8C8745] text-[#8C8745]"
-                    : "hover:bg-gray-100"
-                }`}
-            >
-              {p}
-            </button>
-          ))}
-
-          {/* 次へ */}
-          <button
-            onClick={() => setPage((p) => Math.min(p + 1, totalPages))}
-            disabled={page === totalPages}
-            className="h-10 w-10 rounded-full border text-lg disabled:opacity-30"
-          >
-            ›
-          </button>
-        </div>
-      </section>
-      <TopSNSLinks />
-      <TopFooter />
-
     </>
   );
 };
 
-export default NewsList;
+export default MenuHero;
+
+

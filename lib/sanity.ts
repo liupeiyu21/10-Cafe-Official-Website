@@ -1,5 +1,7 @@
 // src/lib/sanity.ts
 import { createClient } from "@sanity/client";
+import { createImageUrlBuilder } from "@sanity/image-url";
+
 
 export const sanityClient = createClient({
   projectId: "fh72bd6f",
@@ -75,5 +77,50 @@ export async function getSeasonal() {
       image
     }
   `);
+}
+
+
+// menuCategory 取得
+export async function getMenuItems() {
+  return await sanityClient.fetch(`
+    *[_type == "menuItem"]{
+      _id,
+      title,
+      price,
+      image,
+      isNew,
+      tags,
+      category->{
+        title,
+        slug
+      }
+    }
+  `)
+}
+
+
+
+const builder = createImageUrlBuilder(sanityClient);
+export const urlFor = (source: any) => builder.image(source);
+
+/* ===== メニュー用 ===== */
+export async function getMenuByCategory(slug: string) {
+  return await sanityClient.fetch(
+    `
+    *[_type == "menuCategory" && slug.current == $slug][0]{
+      title,
+      slug,
+      "items": *[_type == "menuItem" && category._ref == ^._id] | order(isNew desc){
+        _id,
+        title,
+        price,
+        image,
+        isNew,
+        tags
+      }
+    }
+    `,
+    { slug }
+  );
 }
 

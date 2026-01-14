@@ -6,6 +6,8 @@ import "./App.css";
 import TopIndex from "./Components/Top/TopIndex";
 import TopNewInformation from "./Components/Top/TopNewsDetail";
 import NewsList from "./Components/Top/NewsList";
+import ScrollToTop from "./Components/Common/ScrollToTop";
+import MenuPage from "./Pages/MenuPage";
 
 function App() {
   return (
@@ -17,7 +19,10 @@ function App() {
         <Route path="/coworkingspace" element={<CoworkingSpaceIndex />}></Route>
         <Route path="/news/:slug" element={<TopNewInformation />}></Route>
         <Route path="/newslist" element={<NewsList />}></Route>
+        <Route path="/menu/:category" element={<MenuPage />} />
+
       </Routes>
+       <ScrollToTop />
     </>
   );
 }

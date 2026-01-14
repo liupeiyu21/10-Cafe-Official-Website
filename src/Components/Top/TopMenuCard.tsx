@@ -1,6 +1,14 @@
-const TopMenuCard = ({ image, label }: { image: string; label: string }) => {
+import { Link } from "react-router-dom";
+
+type TopMenuCardProps = {
+  image: string;
+  label: string;
+  to: string;
+};
+
+const TopMenuCard = ({ image, label, to }: TopMenuCardProps) => {
   return (
-    <div className="group relative h-[220px] overflow-hidden">
+    <Link to={to} className="group relative h-[220px] overflow-hidden block">
       
       {/* 画像 */}
       <img
@@ -19,7 +27,7 @@ const TopMenuCard = ({ image, label }: { image: string; label: string }) => {
         </p>
       </div>
 
-    </div>
+    </Link>
   );
 };
 
