@@ -20,6 +20,14 @@ const TopFooter = () => {
         {/* ナビ */}
         <nav className="mb-12 flex justify-center md:flex">
           <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm tracking-widest">
+            <li>
+              <Link
+                  to="/menu/drink"
+                  className="pb-1 border-b border-transparent hover:border-black transition"
+                >
+                  Menu
+              </Link>
+            </li>
             <li className="hover:opacity-60 cursor-pointer">1F</li>
             <li className="hover:opacity-60 cursor-pointer">2F</li>
             <li className="hover:opacity-60 cursor-pointer">COWORKING SPACE</li>
