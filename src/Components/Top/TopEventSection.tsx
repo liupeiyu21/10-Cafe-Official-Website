@@ -1,53 +1,105 @@
-import { Even1, Even2 }  from "../../Images";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { urlFor } from "../../../lib/sanityImage";
+import { getTopEvents } from "../../../lib/sanity";
+
+type Event = {
+  _id: string;
+  title: string;
+  summary: string;
+  image: any;
+  slug: {
+    current: string;
+  };
+  eventDate?: string;
+};
 
 const TopEventSection = () => {
+  const [events, setEvents] = useState<Event[]>([]);
+
+  useEffect(() => {
+    getTopEvents().then(setEvents);
+  }, []);
+
+  if (events.length === 0) return null;
+
   return (
     <section className="bg-white py-24">
-      <div className="mx-auto max-w-4xl">
-
+      <div className="mx-auto max-w-4xl ">
         {/* ===== セクションタイトル ===== */}
-        <div className="flex items-center gap-4 text-[#8C8745] pb-10">
-          {/* 左ライン（短い） */}
-          <span className="block h-[2px] w-17 bg-[#8C8745]" />
-
-          {/* テキスト */}
+        <div className="flex items-center gap-4 text-[#8C8745] pb-16">
+          <span className="block h-[2px] w-16 bg-[#8C8745]" />
           <h2 className="whitespace-nowrap text-xl md:text-4xl font-medium tracking-widest">
             イベント開催
           </h2>
-
-          {/* 右ライン（長い） */}
           <span className="block h-[2px] flex-1 bg-[#8C8745]" />
         </div>
-      </div>
 
-      {/* ===== カード ===== */}
-      <div className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-3 items-end gap-16 px-6">
-        
-        {/* 左 */}
-        <div className="text-center">
+        {/* ===== イベントカード（最大3件） ===== */}
+        <div className="space-y-20">
+          {events.map((event) => (
+            <div
+              key={event._id}
+              className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8"
+            >
+              <div className="px-[10%]">
+              {/* 画像 */}
+              <img
+                src={urlFor(event.image).width(500).url()}
+                alt={event.title}
+                className="rounded-xl"
+              />
+              </div>
 
-          <img src={Even1} alt="イベント現場の写真" />
-          <p className="text-sm leading-relaxed">
-            10°CAFE Cultural Event
-          </p>
+              {/* テキスト */}
+              <div className="flex flex-col justify-center px-[10%]">
+                <h3 className="text-2xl font-semibold">
+                  {event.title}
+                </h3>
+
+                <p className="mt-4 text-sm leading-relaxed text-gray-700">
+                  {event.summary}
+                </p>
+
+                <Link
+                  to={`/events/${event.slug.current}`}
+                  className="inline-block mt-6 text-sm underline hover:opacity-70"
+                >
+                  詳細を見る
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* 中（大きい） */}
-        <div className="text-center">
+        {/* ===== もっと見る ===== */}
 
-          <img src={Even2} alt="イベント現場の写真" />
-          <p className="text-sm leading-relaxed">
-            10°CAFE Cultural Event
-          </p>
-        </div>
-
-        {/* 右 */}
-        <div className="text-center">
-            <img src={Even1} alt="イベント現場の写真" />
-          <p className="text-sm leading-relaxed">
-            10°CAFE Cultural Event
-          </p>
-        </div>
+          <Link
+            to="/events"
+           >
+            <button
+              className="
+                mt-16
+                mx-auto
+                block
+                px-10
+                py-3
+                text-sm
+                tracking-widest
+                text-[#8C8745]
+                border
+                border-[#8C8745]
+                rounded-full
+                transition
+                duration-300
+                hover:bg-[#8C8745]
+                hover:text-white
+              "
+            >
+              もっと見る
+            </button>
+         
+          </Link>
 
       </div>
     </section>
