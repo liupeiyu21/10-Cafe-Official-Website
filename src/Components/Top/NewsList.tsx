@@ -146,9 +146,9 @@ const NewsList = () => {
             </div>
       </header>
 
-      <section className="mx-auto max-w-4xl px-6 py-24">
+      <section className="mx-auto max-w-4xl px-6 pt-24">
         {/* ===== タイトル ===== */}
-        <div className="mb-16 flex items-center gap-6 text-[#8C8745]">
+        <div className="my-16 flex items-center gap-6 text-[#8C8745]">
           <span className="h-[2px] w-12 bg-[#8C8745]" />
           <h1 className="text-3xl font-medium tracking-widest">お知らせ</h1>
           <span className="h-[2px] flex-1 bg-[#8C8745]" />

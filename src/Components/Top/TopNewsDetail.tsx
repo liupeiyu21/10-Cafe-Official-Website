@@ -158,11 +158,33 @@ const TopNewsDetail = () => {
                 <div className="prose max-w-none">
                   <PortableText value={news.body} />
                 </div>
+                <Link to="/newslist">
+                <button
+                className="
+                  mt-16
+                  mx-auto
+                  block
+                  px-10
+                  py-3
+                  text-sm
+                  tracking-widest
+                  text-[#8C8745]
+                  border
+                  border-[#8C8745]
+                  rounded-full
+                  transition
+                  duration-300
+                  hover:bg-[#8C8745]
+                  hover:text-white
+                "
+              >
+                お知らせ一覧
+              </button>
+              </Link>
             </div>
             )}
         </div>
-        </section>
-       {/* <TopAccessSection /> */}
+        </section> 
        <TopSNSLinks />
        <TopFooter />
 

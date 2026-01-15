@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { PortableText } from '@portabletext/react'
+// import { PortableText } from '@portabletext/react'
 import { getNews } from '../../../lib/sanity'
 import { Link } from 'react-router-dom'
 
@@ -31,7 +31,7 @@ export default function TopNews() {
       </div>
 
             {/* ===== お知らせ一覧 ===== */}
-      <ul className="max-w-4xl mx-auto ">
+      <ul className="max-w-4xl mx-auto" >
         {news.map((item) => {
           if (!item.slug?.current) return null; // ← 追加（超重要）
 
