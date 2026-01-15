@@ -30,6 +30,7 @@ export { default as SecondFloorSofa2 } from "./SecondFloor_Sofa2.png";
 export { default as SecondFloorCounter1 } from "./SecondFloor_Counter1.png";
 export { default as SecondFloorCounter2 } from "./SecondFloor_Counter2.png";
 export { default as CoworkingSpaceAbout } from "./CoworkingSpace_About.png";
+export { default as CoworkingSpace } from "./CoworkingSpace.png";
 export { default as PriceClock1 } from "./Price_Clock1.svg";
 export { default as PriceClock2 } from "./Price_Clock2.svg";
 export { default as PriceClock3 } from "./Price_Clock3.svg";
@@ -37,4 +38,5 @@ export { default as ManualCharacter } from "./Character.svg";
 export { default as Tophamburger } from "./Tophamburger.png";
 
 export { default as MenuHero } from "./MenuHero.png"
+
 
