@@ -1,11 +1,12 @@
 import { useState,useEffect } from "react";
-import { Logo } from "../../Images";
+import { Logo, Tophamburger } from "../../Images";
 import { Link, useParams } from "react-router-dom";
 // import { useParams } from "react-router-dom";
 import { PortableText } from "@portabletext/react";
 import { getNewsBySlug } from "../../../lib/sanity";
 import TopSNSLinks from "./TopSNSLinks";
 import TopFooter from "./TopFooter";
+
 // import TopAccessSection from "./TopAccessSection";
 
 
@@ -27,25 +28,19 @@ const TopNewsDetail = () => {
     return (
       <>
         <section className="relative h-screen overflow-hidden">
-
-
-
           {/* ===== ヘッダー ===== */}
-          <header className="relative z-30 bg-[#030303]">
-            <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center border-b-1 border-white">
-              
+          <header className="fixed top-0 left-0 z-50 w-full bg-[#F6F4EF]">
+            <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center">
               {/* ロゴ（スマホ中央） */}
               <div className="flex-1 flex justify-center  md:justify-start">
-                <Link to="/"><img src={Logo} alt="logo" className="pl-[40px] h-12" /></Link>
-                
+                <Link to="/"><img src={Logo} alt="logo" className="pl-[40px] h-12" /></Link> 
               </div>
-
               {/* PCメニュー */}
-              <ul className="hidden md:flex gap-8 text-sm text-white">
+              <ul className="hidden md:flex gap-8 text-sm text-black">
                 <li>
                   <Link
                       to="/firstfloor"
-                      className="pb-1 border-b border-transparent hover:border-white transition"
+                      className="pb-1 border-b border-transparent hover:border-black transition"
                     >
                       1F
                   </Link>
@@ -54,7 +49,7 @@ const TopNewsDetail = () => {
                 <li>
                   <Link
                       to="/secondfloor"
-                      className="pb-1 border-b border-transparent hover:border-white transition"
+                      className="pb-1 border-b border-transparent hover:border-black transition"
                     >
                       2F
                   </Link>
@@ -62,7 +57,7 @@ const TopNewsDetail = () => {
                 <li>
                     <Link
                       to="/coworkingspace"
-                      className="pb-1 border-b border-transparent hover:border-white transition"
+                      className="pb-1 border-b border-transparent hover:border-black transition"
                     >
                       COWORKING SPACE
                   </Link>
@@ -79,17 +74,17 @@ const TopNewsDetail = () => {
               >
                 {/* 上 */}
                 <span
-                  className={`absolute h-[2px] w-8 bg-white transition-all duration-300
+                  className={`absolute h-[2px] w-8 bg-black transition-all duration-300
                   ${isOpen ? "rotate-45 top-1/2" : "top-2"}`}
                 />
                 {/* 中 */}
                 <span
-                  className={`absolute h-[2px] w-6 bg-white transition-all duration-300 left-1
+                  className={`absolute h-[2px] w-6 bg-black transition-all duration-300 left-1
                   ${isOpen ? "opacity-0" : "top-1/2"}`}
                 />
                 {/* 下 */}
                 <span
-                  className={`absolute h-[2px] w-8 bg-white transition-all duration-300
+                  className={`absolute h-[2px] w-8 bg-black transition-all duration-300
                   ${isOpen ? "-rotate-45 top-1/2" : "bottom-2"}`}
                 />
               </button>
@@ -97,41 +92,47 @@ const TopNewsDetail = () => {
 
             {/* ===== スマホメニュー ===== */}
             <div
-              className={`md:hidden absolute top-full left-0 w-full bg-[#030303] overflow-hidden transition-all duration-300
-              ${isOpen ? "max-h-96 py-6" : "max-h-0 py-0"}`}
+              className={`md:hidden absolute top-full left-0 w-full bg-[#D8C7A9] overflow-hidden transition-all duration-300 rounded-b-2xl
+              ${isOpen ? "max-h-206 py-6" : "max-h-0 py-0"}`}
             >
-              <ul className="flex flex-col items-center gap-6 text-sm">
+              <ul className="flex flex-col items-start gap-6 text-sm pl-[10%]">
                 <li className="text-white">
-                  <Link to="/firstfloor" onClick={() => setIsOpen(false)}>
+                  <Link to="/firstfloor" onClick={() => setIsOpen(false)}className="text-white font-bold" >
                     1F
                   </Link>
                 </li>
                 <li className="text-white">
-                  <Link to="/secondfloor" onClick={() => setIsOpen(false)}>
+                  <Link to="/secondfloor" onClick={() => setIsOpen(false)} className="text-white font-bold">
                     2F
                   </Link>
                 </li>
                 <li className="text-white">
-                  <Link to="/coworkingspace" onClick={() => setIsOpen(false)}>
+                  <Link to="/coworkingspace" onClick={() => setIsOpen(false)} className="text-white font-bold">
                     COWORKING SPACE
                   </Link>
                 </li>
                 <li className="text-white">
-                  <Link to="/beans" onClick={() => setIsOpen(false)}>
+                  <Link to="/beans" onClick={() => setIsOpen(false)} className="text-white font-bold">
                     Coffee Beans
                   </Link>
                 </li>
                 <li className="text-white">
-                  <Link to="/recruit" onClick={() => setIsOpen(false)}>
+                  <Link to="/recruit" onClick={() => setIsOpen(false)} className="text-white font-bold">
                     RECRUIT
                   </Link>
                 </li>
                 <li className="text-white">
-                  <Link to="/contact" onClick={() => setIsOpen(false)}>
+                  <Link to="/contact" onClick={() => setIsOpen(false)} className="text-white font-bold">
                     CONTACT
                   </Link>
                 </li>
               </ul>
+              <div className="flex justify-end">
+                <img src={Tophamburger} 
+                  alt="ハンバーガーメニュー"
+                  className="w-[50%] h-[50%] "
+                  />
+              </div>
             </div>
           </header>
           
@@ -157,11 +158,33 @@ const TopNewsDetail = () => {
                 <div className="prose max-w-none">
                   <PortableText value={news.body} />
                 </div>
+                <Link to="/newslist">
+                <button
+                className="
+                  mt-16
+                  mx-auto
+                  block
+                  px-10
+                  py-3
+                  text-sm
+                  tracking-widest
+                  text-[#8C8745]
+                  border
+                  border-[#8C8745]
+                  rounded-full
+                  transition
+                  duration-300
+                  hover:bg-[#8C8745]
+                  hover:text-white
+                "
+              >
+                お知らせ一覧
+              </button>
+              </Link>
             </div>
             )}
         </div>
-        </section>
-       {/* <TopAccessSection /> */}
+        </section> 
        <TopSNSLinks />
        <TopFooter />
 

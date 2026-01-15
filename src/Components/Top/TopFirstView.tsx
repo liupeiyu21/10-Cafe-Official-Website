@@ -11,27 +11,27 @@ const TopFirstView = () => {
       <img
         src={TopKv}
         alt="10°cafe"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full  object-cover"
       />
       <div className="absolute inset-0 bg-black/40" />
 
       {/* ===== ヘッダー ===== */}
-      <header className="relative z-30 bg-white md:bg-transparent">
+      <header className="fixed top-0 left-0 z-50 w-full bg-[#F6F4EF]">
         <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center">
           
           {/* ロゴ（スマホ中央） */}
-          <div className="flex-1 flex justify-center  md:justify-start">
+          <div className="flex-1 flex justify-center m  md:justify-start">
             <Link to="/">
               <img src={Logo} alt="logo" className="pl-[40px] h-12" />
             </Link>
           </div>
 
           {/* PCメニュー */}
-          <ul className="hidden md:flex gap-8 text-sm text-white">
+          <ul className="hidden md:flex gap-8 text-sm text-black">
             <li>
               <Link
                   to="/firstfloor"
-                  className="pb-1 border-b border-transparent hover:border-white transition"
+                  className="pb-1 border-b border-transparent hover:border-black transition"
                 >
                   1F
               </Link>
@@ -40,7 +40,7 @@ const TopFirstView = () => {
             <li>
               <Link
                   to="/secondfloor"
-                  className="pb-1 border-b border-transparent hover:border-white transition"
+                  className="pb-1 border-b border-transparent hover:border-black transition"
                 >
                   2F
               </Link>
@@ -48,7 +48,7 @@ const TopFirstView = () => {
             <li>
                 <Link
                   to="/coworkingspace"
-                  className="pb-1 border-b border-transparent hover:border-white transition"
+                  className="pb-1 border-b border-transparent hover:border-black transition"
                 >
                   COWORKING SPACE
               </Link>
@@ -123,12 +123,12 @@ const TopFirstView = () => {
               alt="ハンバーガーメニュー"
               className="w-[50%] h-[50%] "
               />
-            </div>
+          </div>
         </div>
       </header>
 
       {/* ===== 中央テキスト ===== */}
-      <div className="relative z-20 flex h-full items-center justify-center text-white">
+      <div className="relative z-20 flex h-full items-center justify-center text-white pt-10 md:pt-50">
         <div className="text-center px-6 -translate-y-15 md:-translate-y-16">
           <h1 className="font-impact text-6xl md:text-9xl font-extrabold">
             10°Cafe

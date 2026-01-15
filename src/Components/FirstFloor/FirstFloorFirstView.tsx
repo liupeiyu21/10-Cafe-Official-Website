@@ -30,7 +30,7 @@ const FirstFloorFirstView = () => {
       </div>
 
       {/* ===== ヘッダー ===== */}
-      <header className="relative z-30 bg-white md:bg-transparent">
+      <header className="fixed top-0 left-0 z-50 w-full bg-[#F6F4EF]">
         <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center">
           {/* ロゴ */}
           <div className="flex-1 flex justify-center md:justify-start">
@@ -40,13 +40,13 @@ const FirstFloorFirstView = () => {
           </div>
 
           {/* PCメニュー */}
-          <ul className="hidden md:flex gap-8 text-sm text-white">
-            <li><Link to="/firstfloor" className="pb-1 border-b border-transparent hover:border-white transition">1F</Link></li>
-            <li><Link to="/secondfloor" className="pb-1 border-b border-transparent hover:border-white transition">2F</Link></li>
-            <li><Link to="/coworkingspace" className="pb-1 border-b border-transparent hover:border-white transition">COWORKING SPACE</Link></li>
-            <li className="pb-1 border-b border-transparent hover:border-white transition">Coffee Beans</li>
-            <li className="pb-1 border-b border-transparent hover:border-white transition">RECRUIT</li>
-            <li className="pb-1 border-b border-transparent hover:border-white transition">CONTACT</li>
+          <ul className="hidden md:flex gap-8 text-sm text-black">
+            <li><Link to="/firstfloor" className="pb-1 border-b border-transparent hover:border-black transition">1F</Link></li>
+            <li><Link to="/secondfloor" className="pb-1 border-b border-transparent hover:border-black transition">2F</Link></li>
+            <li><Link to="/coworkingspace" className="pb-1 border-b border-transparent hover:border-black transition">COWORKING SPACE</Link></li>
+            <li className="pb-1 border-b border-transparent hover:border-black transition">Coffee Beans</li>
+            <li className="pb-1 border-b border-transparent hover:border-black transition">RECRUIT</li>
+            <li className="pb-1 border-b border-transparent hover:border-black transition">CONTACT</li>
           </ul>
 
           {/* ハンバーガー */}
