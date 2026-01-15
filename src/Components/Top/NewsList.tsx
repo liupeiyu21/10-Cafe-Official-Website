@@ -49,6 +49,14 @@ const NewsList = () => {
               <ul className="hidden md:flex gap-8 text-sm text-black">
                 <li>
                   <Link
+                      to="/menu/drink"
+                      className="pb-1 border-b border-transparent hover:border-black transition"
+                    >
+                      Menu
+                  </Link>
+                </li>
+                <li>
+                  <Link
                       to="/firstfloor"
                       className="pb-1 border-b border-transparent hover:border-black transition"
                     >

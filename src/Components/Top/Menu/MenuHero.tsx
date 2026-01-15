@@ -22,6 +22,14 @@ const MenuHero = () => {
               <ul className="hidden md:flex gap-8 text-sm text-white">
                 <li>
                   <Link
+                      to="/menu/drink"
+                      className="pb-1 border-b border-transparent hover:border-black transition"
+                    >
+                      Menu
+                  </Link>
+                </li>
+                <li>
+                  <Link
                       to="/firstfloor"
                       className="pb-1 border-b border-transparent hover:border-white transition"
                     >
@@ -79,6 +87,11 @@ const MenuHero = () => {
               ${isOpen ? "max-h-206 py-6" : "max-h-0 py-0"}`}
             >
               <ul className="flex flex-col items-start gap-6 text-sm pl-[10%]">
+                <li>
+                  <Link to="/menu/drink" onClick={() => setIsOpen(false)} className="text-white font-bold">
+                    Menu
+                  </Link>
+                </li>
                 <li className="text-white">
                   <Link to="/firstfloor" onClick={() => setIsOpen(false)} className="font-bold">
                     1F

@@ -20,9 +20,38 @@ const TopFooter = () => {
         {/* ナビ */}
         <nav className="mb-12 flex justify-center md:flex">
           <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm tracking-widest">
-            <li className="hover:opacity-60 cursor-pointer">1F</li>
-            <li className="hover:opacity-60 cursor-pointer">2F</li>
-            <li className="hover:opacity-60 cursor-pointer">COWORKING SPACE</li>
+            <li>
+              <Link
+                  to="/menu/drink"
+                  className="pb-1 border-b border-transparent hover:border-black transition"
+                >
+                  Menu
+              </Link>
+            </li>
+            <li>
+              <Link
+                  to="/firstfloor"
+                  className="pb-1 border-b border-transparent hover:border-black transition"
+                >
+                  1F
+              </Link>
+            </li>
+                <li>
+                    <Link
+                    to="/secondfloor"
+                    className="pb-1 border-b border-transparent hover:border-black transition"
+                    >
+                    2F
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                    to="/coworkingspace"
+                    className="pb-1 border-b border-transparent hover:border-black transition"
+                    >
+                    COWORKING SPACE
+                    </Link>
+                </li>
             <li className="hover:opacity-60 cursor-pointer">Coffee Beans</li>
             <li className="hover:opacity-60 cursor-pointer">RECRUIT</li>
             <li className="hover:opacity-60 cursor-pointer">CONTACT US</li>
