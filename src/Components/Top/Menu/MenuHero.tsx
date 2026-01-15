@@ -1,14 +1,13 @@
-import { MenuHero as MenuHeroImage } from "../../../Images";
+// import { MenuHero as MenuHeroImage } from "../../../Images";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Logo, Tophamburger } from "../../../Images";
 
-const MenuHero = ({ title }: { title: string }) => {
+const MenuHero = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-        <div className="">
           {/* ===== ヘッダー ===== */}
           <header className="fixed top-0 left-0 z-50 w-full bg-[#8C8745]">
             <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center">
@@ -119,27 +118,10 @@ const MenuHero = ({ title }: { title: string }) => {
           </div>             
             </div>
           </header>
-      
 
-        
-            <section className="relative w-full overflow-hidden">
-            
-            {/* 背景画像（波形） */}
-            <img
-                src={MenuHeroImage}
-                alt="menu hero background"
-                className="absolute inset-0 h-full w-full object-cover"
-            />
 
-            {/* 文字レイヤー */}
-            <div className="relative z-10 px-6 py-24 md:py-32">
-                <h1 className="text-4xl md:text-6xl font-medium tracking-wide text-white">
-                {title}
-                </h1>
-            </div>
 
-            </section>
-        </div>
+
     </>
   );
 };

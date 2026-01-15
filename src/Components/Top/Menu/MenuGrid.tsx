@@ -32,9 +32,9 @@ const MenuGrid = ({ categorySlug }: MenuGridProps) => {
   return (
     <section className="mx-auto max-w-6xl px-6 py-24">
       {/* ===== カテゴリタイトル ===== */}
-      <h2 className="mb-12 text-3xl font-semibold tracking-wide text-[#8C8745]">
+      {/* <h2 className="mb-12 text-3xl font-semibold tracking-wide text-[#8C8745]">
         {data.title}
-      </h2>
+      </h2> */}
 
       {/* ===== メニューグリッド ===== */}
       <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
