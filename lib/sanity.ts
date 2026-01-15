@@ -124,3 +124,72 @@ export async function getMenuByCategory(slug: string) {
   );
 }
 
+// Swiper用バナー取得
+export async function getSwiperBanners() {
+  return await sanityClient.fetch(`
+    *[_type == "swiperBanner" && isActive == true]
+    | order(order asc){
+      _id,
+      title,
+      image,
+      link
+    }
+  `);
+}
+
+// Top用イベント取得（最大3件）
+export async function getTopEvents() {
+  return await sanityClient.fetch(`
+    *[_type == "event" && isPublished == true]
+    | order(eventDate desc)[0...3] {
+      _id,
+      title,
+      slug,
+      image,
+      summary,
+      eventDate
+    }
+  `);
+}
+
+
+
+// 詳細用イベント取得
+export async function getEventBySlug(slug: string) {
+  return await sanityClient.fetch(
+    `
+    *[_type == "event" && slug.current == $slug][0] {
+      title,
+      image,
+      body,
+      eventDate
+    }
+    `,
+    { slug }
+  );
+}
+
+
+// イベント一覧取得 一覧用（全件）
+export async function getEvents(page: number, limit = 10) {
+  const start = (page - 1) * limit;
+  const end = start + limit;
+
+  return await sanityClient.fetch(
+    `
+    {
+      "events": *[_type == "event"] | order(date desc)[$start...$end]{
+        _id,
+        title,
+        slug,
+        date,
+        summary
+      },
+      "total": count(*[_type == "event"])
+    }
+    `,
+    { start, end }
+  );
+}
+
+

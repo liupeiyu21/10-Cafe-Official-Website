@@ -1,9 +1,9 @@
 const categories = [
-  { label: "ドリンク", value: "drink" },
-  { label: "フード", value: "food" },
-  { label: "デザート", value: "dessert" },
-  { label: "モーニング", value: "morning" },
-  { label: "テイクアウト", value: "takeout" },
+  { label: "drink", value: "drink" },
+  { label: "food", value: "food" },
+  { label: "dessert", value: "dessert" },
+  { label: "morning", value: "morning" },
+  { label: "takeout", value: "takeout" },
 ];
 
 type Props = {
@@ -13,17 +13,24 @@ type Props = {
 
 const CategoryTabs = ({ active, onChange }: Props) => {
   return (
-    <div className="flex justify-center gap-4 pt-70 md:pt-80 ">
+    <div className="flex flex-wrap justify-center gap-3 pt-80 md:pt-100">
       {categories.map((c) => (
         <button
           key={c.value}
           onClick={() => onChange(c.value)}
-          className={`px-6 md:px-20 py-2 md:py-5 rounded-full text-sm transition
+          className={`
+            w-[30%] md:w-auto
+            px-4 md:px-20
+            py-2 md:py-5
+            rounded-full
+            text-sm
+            transition
             ${
               active === c.value
                 ? "bg-[#C7C24A] text-white"
                 : "bg-gray-100 text-gray-600"
-            }`}
+            }
+          `}
         >
           {c.label}
         </button>

@@ -8,6 +8,8 @@ import TopNewInformation from "./Components/Top/TopNewsDetail";
 import NewsList from "./Components/Top/NewsList";
 import ScrollToTop from "./Components/Common/ScrollToTop";
 import MenuPage from "./Pages/MenuPage";
+import EventsPage from "./Components/Top/EventsPage";
+import EventDetailPage from "./Components/Top/EventDetailPage";
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
         <Route path="/news/:slug" element={<TopNewInformation />}></Route>
         <Route path="/newslist" element={<NewsList />}></Route>
         <Route path="/menu/:category" element={<MenuPage />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/events/:slug" element={<EventDetailPage />} />
+
 
       </Routes>
        <ScrollToTop />
