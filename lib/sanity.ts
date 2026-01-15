@@ -124,3 +124,17 @@ export async function getMenuByCategory(slug: string) {
   );
 }
 
+// Swiper用バナー取得
+export async function getSwiperBanners() {
+  return await sanityClient.fetch(`
+    *[_type == "swiperBanner" && isActive == true]
+    | order(order asc){
+      _id,
+      title,
+      image,
+      link
+    }
+  `);
+}
+
+
