@@ -7,7 +7,7 @@ const FloorSection = () => {
 
         {/* ===== 1F ===== */}
         
-      <div className="grid items-center grid-cols-[222px_1fr] md:grid-cols-[7.6fr_5fr] ">
+      <div className="grid items-center grid-cols-[59%_1fr] md:grid-cols-[7.6fr_5fr] ">
         {/* ===== 画像 ===== */}
         <div className="relative overflow-visible ">
           <img
@@ -48,7 +48,7 @@ const FloorSection = () => {
         
 
         {/* ===== 2F ===== */}
-        <div className="grid items-center grid-cols-[1fr_222px]  md:grid-cols-[5fr_7fr]">
+        <div className="grid items-center grid-cols-[1fr_59%]  md:grid-cols-[5fr_7fr]">
           {/* テキスト */}
           <div className="flex items-center bg-[#F6F3EE] pl-4 pr-1 md:px-12">
             <div>
@@ -84,7 +84,7 @@ const FloorSection = () => {
         
 
         {/* ===== 3F ===== */}
-        <div className="grid items-center grid-cols-[222px_1fr] md:grid-cols-[7.3fr_5fr]">
+        <div className="grid items-center grid-cols-[59%_1fr] md:grid-cols-[7.3fr_5fr]">
           {/* 画像 */}
           <div className="">
             <div className="relative overflow-visible">
