@@ -52,8 +52,22 @@ const TopFooter = () => {
                     COWORKING SPACE
                     </Link>
                 </li>
-            <li className="hover:opacity-60 cursor-pointer">Coffee Beans</li>
-            <li className="hover:opacity-60 cursor-pointer">RECRUIT</li>
+                <li>
+                    <Link
+                    to="/cafebeansexindex"
+                    className="pb-1 border-b border-transparent hover:border-black transition"
+                    >
+                    COFFEE BEANS 
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                    to="/recruitindex"
+                    className="pb-1 border-b border-transparent hover:border-black transition"
+                    >
+                      RECRUIT
+                    </Link>
+                </li>
             <li className="hover:opacity-60 cursor-pointer">CONTACT US</li>
           </ul>
         </nav>

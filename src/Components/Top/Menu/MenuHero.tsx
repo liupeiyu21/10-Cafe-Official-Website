@@ -23,7 +23,7 @@ const MenuHero = () => {
                 <li>
                   <Link
                       to="/menu/drink"
-                      className="pb-1 border-b border-transparent hover:border-black transition"
+                      className="pb-1 border-b border-transparent hover:border-white transition"
                     >
                       Menu
                   </Link>
@@ -52,9 +52,23 @@ const MenuHero = () => {
                     >
                       COWORKING SPACE
                   </Link>
-                  </li>
-                <li>Coffee Beans</li>
-                <li>RECRUIT</li>
+                </li>
+                <li>
+                    <Link
+                      to="/cafebeansexindex"
+                      className="pb-1 border-b border-transparent hover:border-white transition"
+                    >
+                      COFFEE BEANS
+                  </Link>
+                </li>
+                <li>
+                    <Link
+                      to="/recruitindex"
+                      className="pb-1 border-b border-transparent hover:border-white transition"
+                    >
+                      RECRUIT
+                  </Link>
+                </li>
                 <li>CONTACT</li>
               </ul>
 
@@ -109,7 +123,7 @@ const MenuHero = () => {
                 </li>
                 <li className="text-white">
                   <Link to="/beans" onClick={() => setIsOpen(false)} className="font-bold">
-                    Coffee Beans
+                    COFFEE BEABS
                   </Link>
                 </li>
                 <li className="text-white">

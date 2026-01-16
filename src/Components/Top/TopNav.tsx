@@ -144,16 +144,16 @@ const TopNav = () => {
                 </li>
                 <li>
                     <Link
-                    to="/beans"
+                    to="/cafebeansexindex"
                     onClick={() => setIsOpen(false)}
                     className="font-bold text-white"
                     >
-                    Coffee Beans
+                    COFFEE BEANS
                     </Link>
                 </li>
                 <li>
                     <Link
-                    to="/recruit"
+                    to="/recruitindex"
                     onClick={() => setIsOpen(false)}
                     className="font-bold text-white"
                     >

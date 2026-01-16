@@ -79,9 +79,23 @@ const NewsList = () => {
                     >
                       COWORKING SPACE
                   </Link>
-                  </li>
-                <li>Coffee Beans</li>
-                <li>RECRUIT</li>
+                </li>
+                <li>
+                    <Link
+                      to="/cafebeansexindex"
+                      className="pb-1 border-b border-transparent hover:border-black transition"
+                    >
+                      COFFEE BEANS
+                  </Link>
+                </li>
+                <li>
+                    <Link
+                      to="/recruitindex"
+                      className="pb-1 border-b border-transparent hover:border-black transition"
+                    >
+                      RECRUIT
+                  </Link>
+                </li>
                 <li>CONTACT</li>
               </ul>
 
@@ -130,12 +144,12 @@ const NewsList = () => {
                   </Link>
                 </li>
                 <li className="text-white">
-                  <Link to="/beans" onClick={() => setIsOpen(false)} className="font-bold">
-                    Coffee Beans
+                  <Link to="/afebeansexindex" onClick={() => setIsOpen(false)} className="font-bold">
+                    COFFEE BEANS
                   </Link>
                 </li>
                 <li className="text-white">
-                  <Link to="/recruit" onClick={() => setIsOpen(false)} className="font-bold">
+                  <Link to="/recruitindex" onClick={() => setIsOpen(false)} className="font-bold">
                     RECRUIT
                   </Link>
                 </li>
