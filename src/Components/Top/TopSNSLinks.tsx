@@ -1,5 +1,5 @@
 import { FaXTwitter, FaInstagram } from "react-icons/fa6";
-import TopFooter from "./TopFooter";
+import ScrollTopCharacter from "../ScrollTopCharacter";
 
 const TopSNSLinks = () => {
   return (
@@ -32,6 +32,7 @@ const TopSNSLinks = () => {
           </a>
         </div>
       </div>
+      <ScrollTopCharacter />
     </>
   );
 };

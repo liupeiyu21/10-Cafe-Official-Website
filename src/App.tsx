@@ -13,6 +13,7 @@ import EventDetailPage from "./Components/Top/EventDetailPage";
 import CafeBeansEcIndex from "./Components/CafeBeansEC/CafeBeansEcIndex";
 import RecruitIndex from "./Components/Recruit/RecruitIndex";
 
+
 function App() {
   return (
     <>
