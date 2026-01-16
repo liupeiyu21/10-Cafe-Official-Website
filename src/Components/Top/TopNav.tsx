@@ -56,8 +56,22 @@ const TopNav = () => {
                     COWORKING SPACE
                     </Link>
                 </li>
-                <li>Coffee Beans</li>
-                <li>RECRUIT</li>
+                <li>
+                    <Link
+                    to="/cafebeansexindex"
+                    className="pb-1 border-b border-transparent hover:border-black transition"
+                    >
+                    COFFEE BEANS
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                    to="/recruitindex"
+                    className="pb-1 border-b border-transparent hover:border-black transition"
+                    >
+                    RECRUIT
+                    </Link>
+                </li>
                 <li>CONTACT</li>
                 </ul>
 
