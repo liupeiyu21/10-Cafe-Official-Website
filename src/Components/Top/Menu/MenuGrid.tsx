@@ -30,7 +30,7 @@ const MenuGrid = ({ categorySlug }: MenuGridProps) => {
   if (!data) return null;
 
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24">
+    <section className="mx-auto max-w-6xl px-6 pt-24">
       {/* ===== カテゴリタイトル ===== */}
       {/* <h2 className="mb-12 text-3xl font-semibold tracking-wide text-[#8C8745]">
         {data.title}

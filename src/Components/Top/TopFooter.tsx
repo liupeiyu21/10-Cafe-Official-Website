@@ -18,7 +18,7 @@ const TopFooter = () => {
             <li>
               <Link
                 to="/menu/drink"
-                className="pb-1 border-b border-transparent hover:border-black transition"
+                className="pb-1 border-b border-transparent hover:border-b-3 hover:border-black transition"
               >
                 Menu
               </Link>
@@ -26,7 +26,7 @@ const TopFooter = () => {
             <li>
               <Link
                 to="/firstfloor"
-                className="pb-1 border-b border-transparent hover:border-black transition"
+                className="pb-1 border-b border-transparent hover:border-b-3 hover:border-black transition"
               >
                 1F
               </Link>
@@ -34,7 +34,7 @@ const TopFooter = () => {
             <li>
               <Link
                 to="/secondfloor"
-                className="pb-1 border-b border-transparent hover:border-black transition"
+                className="pb-1 border-b border-transparent hover:border-b-3 hover:border-black transition"
               >
                 2F
               </Link>
@@ -42,7 +42,7 @@ const TopFooter = () => {
             <li>
               <Link
                 to="/coworkingspace"
-                className="pb-1 border-b border-transparent hover:border-black transition"
+                className="pb-1 border-b border-transparent hover:border-b-3 hover:border-black transition"
               >
                 COWORKING SPACE
               </Link>
@@ -50,7 +50,7 @@ const TopFooter = () => {
             <li>
               <Link
                 to="/cafebeansexindex"
-                className="pb-1 border-b border-transparent hover:border-black transition"
+                className="pb-1 border-b border-transparent hover:border-b-3 hover:border-black transition"
               >
                 COFFEE BEANS
               </Link>
@@ -58,7 +58,7 @@ const TopFooter = () => {
             <li>
               <Link
                 to="/recruitindex"
-                className="pb-1 border-b border-transparent hover:border-black transition"
+                className="pb-1 border-b border-transparent hover:border-b-3 hover:border-black transition"
               >
                 RECRUIT
               </Link>

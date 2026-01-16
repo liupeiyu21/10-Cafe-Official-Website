@@ -7,7 +7,7 @@ import TopIndex from "./Components/Top/TopIndex";
 import TopNewInformation from "./Components/Top/TopNewsDetail";
 import NewsList from "./Components/Top/NewsList";
 import ScrollToTop from "./Components/Common/ScrollToTop";
-import MenuPage from "./Pages/MenuPage";
+import MenuPage from "./Components/Top/Menu/MenuPageIndex";
 import EventsPage from "./Components/Top/EventsPage";
 import EventDetailPage from "./Components/Top/EventDetailPage";
 import CafeBeansEcIndex from "./Components/CafeBeansEC/CafeBeansEcIndex";
@@ -28,9 +28,8 @@ function App() {
         <Route path="/events/:slug" element={<EventDetailPage />} />
         <Route path="/cafebeansexindex" element={<CafeBeansEcIndex />}></Route>
         <Route path="/recruitindex" element={<RecruitIndex />}></Route>
-
       </Routes>
-       <ScrollToTop />
+      <ScrollToTop />
     </>
   );
 }
