@@ -1,21 +1,19 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 // import { PortableText } from '@portabletext/react'
-import { getNews } from '../../../lib/sanity'
-import { Link } from 'react-router-dom'
-
+import { getNews } from "../../../lib/sanity";
+import { Link } from "react-router-dom";
 
 export default function TopNews() {
-  const [news, setNews] = useState<any[]>([])
+  const [news, setNews] = useState<any[]>([]);
 
   useEffect(() => {
-    getNews().then(setNews)
-  }, [])
+    getNews().then(setNews);
+  }, []);
 
   return (
     <section className="pb-10 md:pb-12">
-
       {/* ===== セクションタイトル ===== */}
-      <div className='mx-auto max-w-4xl md:px-6 pt-10 md:pt-24'>
+      <div className="mx-auto max-w-4xl md:px-6 pt-10 md:pt-24">
         <div className="flex items-center gap-4 text-[#8C8745] pb-10">
           {/* 左ライン（短い） */}
           <span className="block h-[2px] w-17 bg-[#8C8745]" />
@@ -30,23 +28,21 @@ export default function TopNews() {
         </div>
       </div>
 
-            {/* ===== お知らせ一覧 ===== */}
-      <ul className="max-w-4xl mx-auto" >
+      {/* ===== お知らせ一覧 ===== */}
+      <ul className="max-w-4xl mx-auto">
         {news.map((item) => {
           if (!item.slug?.current) return null; // ← 追加（超重要）
 
           return (
             <li
               key={item._id}
-              className="flex flex-col gap-3 py-2 pl-[4%] text-sm md:flex-row md:gap-6 hover:bg-[#F6F4EF]"
+              className="flex flex-col gap-3 py-2 pl-[4%] text-base md:flex-row md:gap-6 hover:bg-[#F6F4EF]"
             >
               <Link
-                to={`/news/${item.slug.current}`}   // ← } 修正
+                to={`/news/${item.slug.current}`} // ← } 修正
                 className="flex flex-col gap-3 md:flex-row md:gap-6 w-full cursor-pointer"
               >
-                <p className="w-[120px] text-gray-400 shrink-0">
-                  {item.date}
-                </p>
+                <p className="w-[120px] text-gray-400 shrink-0">{item.date}</p>
 
                 <div className="flex flex-row justify-start">
                   <h3 className="w-[100%] font-semibold shrink-0">
@@ -78,12 +74,12 @@ export default function TopNews() {
             duration-300
             hover:bg-[#8C8745]
             hover:text-white
+            cursor-pointer
           "
         >
           お知らせ一覧
         </button>
       </Link>
-
     </section>
-  )
+  );
 }

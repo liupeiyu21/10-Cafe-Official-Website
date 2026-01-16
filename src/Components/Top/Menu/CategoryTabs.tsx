@@ -1,9 +1,9 @@
 const categories = [
-  { label: "drink", value: "drink" },
-  { label: "food", value: "food" },
-  { label: "dessert", value: "dessert" },
-  { label: "morning", value: "morning" },
-  { label: "takeout", value: "takeout" },
+  { label: "Drink", value: "drink" },
+  { label: "Food", value: "food" },
+  { label: "Dessert", value: "dessert" },
+  { label: "Morning", value: "morning" },
+  { label: "Takeout", value: "takeout" },
 ];
 
 type Props = {
@@ -23,8 +23,10 @@ const CategoryTabs = ({ active, onChange }: Props) => {
             px-4 md:px-20
             py-2 md:py-5
             rounded-full
-            text-sm
+            text-base
+            font-medium
             transition
+            cursor-pointer
             ${
               active === c.value
                 ? "bg-[#C7C24A] text-white"

@@ -24,8 +24,10 @@ const MenuPage = () => {
   return (
     <>
       <MenuHero />
-      <MenuHeroTitle title={titleMap[activeCategory] || "Drink Metitle={titleMap[activeCanu"} />
-       <WaveCanvas />  
+      <MenuHeroTitle
+        title={titleMap[activeCategory] || "Drink Metitle={titleMap[activeCanu"}
+      />
+      <WaveCanvas />
 
       <CategoryTabs
         active={activeCategory}
