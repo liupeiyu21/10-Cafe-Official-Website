@@ -7,7 +7,7 @@ const EcLink = () => {
         店頭・オンライン購入
       </h3>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-[320px_1fr] items-start">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-[40%_1fr] items-start">
         {/* 左：画像 */}
         <div className="overflow-hidden rounded-2xl">
           <img
@@ -19,7 +19,7 @@ const EcLink = () => {
 
         {/* 右：テキスト */}
         <div className="mx-auto text-center md:text-start flex flex-col h-full">
-          <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-6 text-start">
+          <p className="text-base md:text-lg leading-relaxed text-gray-700 mb-6 text-start">
             そんなこだわりのコーヒーをご自宅でもお楽しみいただけるように、
             店頭では1,800円、オンラインでは2,000円で販売しております。
             こだわりのコーヒーをぜひ10°cafeで、そしてご自宅でもお楽しみください。
