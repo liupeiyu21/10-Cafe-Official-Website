@@ -1,7 +1,7 @@
 import { FreePaper1 } from "../../Images";
 const FreePaper = () => {
   return (
-    <section className="mx-auto max-w-6xl px-5 py-20">
+    <section className="mx-auto max-w-6xl px-5 pt-20">
       {/* Top */}
       <div className="mb-14 flex flex-col gap-12 md:flex-row md:items-start md:gap-16">
         <img

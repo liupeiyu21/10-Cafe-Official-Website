@@ -28,63 +28,58 @@ const EventsPage = () => {
 
   return (
     <>
-        <TopNav />
-        <section className="bg-white pt-30">
+      <TopNav />
+      <section className="bg-white pt-30">
         <div className="mx-auto max-w-4xl px-6">
-
-            {/* ===== タイトル ===== */}
-            <div className="flex items-center gap-4 text-[#8C8745] pb-12">
+          {/* ===== タイトル ===== */}
+          <div className="flex items-center gap-4 text-[#8C8745] pb-12">
             <span className="block h-[2px] w-16 bg-[#8C8745]" />
             <h1 className="text-xl md:text-4xl font-medium tracking-widest">
-                イベント一覧
+              イベント一覧
             </h1>
             <span className="block h-[2px] flex-1 bg-[#8C8745]" />
-            </div>
+          </div>
 
-            {/* ===== 一覧 ===== */}
-            <div>
+          {/* ===== 一覧 ===== */}
+          <div>
             {events.map((event) => (
-                <Link
+              <Link
                 key={event._id}
                 to={`/events/${event.slug.current}`}
                 className="block border-t py-8 hover:opacity-70"
-                >
+              >
                 <div className="flex flex-col md:flex-row md:items-center gap-6">
-                    <p className="text-gray-400 w-32">
-                    {event.date}
-                    </p>
-                    <h3 className="text-lg font-medium">
-                    {event.title}
-                    </h3>
+                  <p className="text-gray-400 w-32">{event.date}</p>
+                  <h3 className="text-lg font-medium">{event.title}</h3>
                 </div>
-                </Link>
+              </Link>
             ))}
-            </div>
+          </div>
 
-            {/* ===== ページネーション ===== */}
-            <div className="flex justify-center gap-4 pt-16">
+          {/* ===== ページネーション ===== */}
+          <div className="flex justify-center gap-4 pt-16">
             {Array.from({ length: totalPages }).map((_, i) => {
-                const p = i + 1;
-                return (
+              const p = i + 1;
+              return (
                 <Link
-                    key={p}
-                    to={`/events?page=${p}`}
-                    className={`w-10 h-10 flex items-center justify-center rounded-full border
+                  key={p}
+                  to={`/events?page=${p}`}
+                  className={`w-10 h-10 flex items-center justify-center rounded-full border
                     ${
-                        p === page
+                      p === page
                         ? "border-[#8C8745] text-[#8C8745]"
                         : "border-gray-300 text-gray-400"
                     }`}
                 >
-                    {p}
+                  {p}
                 </Link>
-                );
+              );
             })}
-            </div>
+          </div>
         </div>
-        </section>
-        <TopSNSLinks />
-        <TopFooter />
+      </section>
+      <TopSNSLinks />
+      <TopFooter />
     </>
   );
 };

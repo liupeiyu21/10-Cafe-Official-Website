@@ -12,7 +12,7 @@ const TopAccessSection = () => {
     <div className="bg-gray-100 rounded-xl md:rounded-3xl overflow-hidden shadow-xl h-[300px] md:h-[500px]">
       <iframe
         title="10cafe-map"
-        src="https://www.google.com/maps?q=10%C2%B0cafe%20%E9%AB%98%E7%94%B0%E9%A6%AC%E5%A0%B4&output=embed"
+        src="https://www.google.com/maps?q=10%C2%B0CAFE%20%E9%AB%98%E7%94%B0%E9%A6%AC%E5%A0%B4%E5%BA%97&hl=ja&output=embed"
         className="w-full h-full border-0"
         loading="lazy"
       />

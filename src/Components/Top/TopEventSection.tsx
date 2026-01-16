@@ -40,9 +40,9 @@ const TopEventSection = () => {
           {events.map((event) => (
             <div
               key={event._id}
-              className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8"
+              className="grid grid-cols-1 md:grid-cols-[40%_1fr] gap-8"
             >
-              <div className="px-[10%]">
+              <div className="px-[10%] md:px-0">
               {/* 画像 */}
               <img
                 src={urlFor(event.image).width(500).url()}
@@ -53,17 +53,17 @@ const TopEventSection = () => {
 
               {/* テキスト */}
               <div className="flex flex-col justify-center px-[10%]">
-                <h3 className="text-2xl font-semibold">
+                <h3 className="text-xl md:text-4xl text-[#8C8745] font-semibold">
                   {event.title}
                 </h3>
 
-                <p className="mt-4 text-sm leading-relaxed text-gray-700">
+                <p className="mt-4 text-sm md:text-lg leading-relaxed text-gray-700">
                   {event.summary}
                 </p>
 
                 <Link
                   to={`/events/${event.slug.current}`}
-                  className="inline-block mt-6 text-sm underline hover:opacity-70"
+                  className="inline-block mt-6 text-sm font-bold underline hover:opacity-70"
                 >
                   詳細を見る
                 </Link>

@@ -1,51 +1,49 @@
-import { Floor1, Floor2, Floor3 } from '../../Images';
+import { Floor1, Floor2, Floor3 } from "../../Images";
 
 const FloorSection = () => {
   return (
     <section className="bg-[#F6F4EF] py-24">
       <div className=" mx-auto max-w-4xl">
-
         {/* ===== 1F ===== */}
-        
-      <div className="grid items-center grid-cols-[59%_1fr] md:grid-cols-[7.6fr_5fr] ">
-        {/* ===== 画像 ===== */}
-        <div className="relative overflow-visible ">
-          <img
-            src={Floor1}
-            alt="1F 横ならび席"
-            className="
+
+        <div className="grid items-center grid-cols-[59%_1fr] md:grid-cols-[7.6fr_5fr] ">
+          {/* ===== 画像 ===== */}
+          <div className="relative overflow-visible ">
+            <img
+              src={Floor1}
+              alt="1F 横ならび席"
+              className="
               w-full h-auto object-contain
               md:h-full md:w-full md:object-cover
             "
-          />
-          <span className="
+            />
+            <span
+              className="
             absolute top-0 left-0
             -translate-y-2/4
             text-5xl
             md:text-6xl font-bold
            text-[#8C8745] 
             text-outline
-          ">
-            1F
-          </span>
-        </div>
+          "
+            >
+              1F
+            </span>
+          </div>
 
-        {/* ===== テキスト ===== */}
-        <div className="flex items-center bg-[#F6F3EE] pl-1 pr-4 md:px-12 py-4">
-          <div>
-            <h3 className="mb-4 md:mb-10 text-xl md:text-4xl font-semibold text-[#8C8745]">
-              横ならび席
-            </h3>
-            <p className="text-xs md:text-lg leading-relaxed">
-              1人でゆっくりランチをしたり、
-              作業をされたい方におすすめな
-              横並びのお席です。
-            </p>
+          {/* ===== テキスト ===== */}
+          <div className="flex items-center bg-[#F6F3EE] pl-1 pr-4 md:px-12 py-4">
+            <div>
+              <h3 className="mb-4  text-xl md:text-4xl font-semibold text-[#8C8745]">
+                横ならび席
+              </h3>
+              <p className="text-xs md:text-lg leading-relaxed">
+                1人でゆっくりランチをしたり、 作業をされたい方におすすめな
+                横並びのお席です。
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-
-        
 
         {/* ===== 2F ===== */}
         <div className="grid items-center grid-cols-[1fr_59%]  md:grid-cols-[5fr_7fr]">
@@ -56,8 +54,7 @@ const FloorSection = () => {
                 テーブル席
               </h3>
               <p className="text-xs md:text-lg leading-relaxed">
-                1人で作業したり、2人でおしゃべり
-                したりできる落ち着いた雰囲気の
+                1人で作業したり、2人でおしゃべり したりできる落ち着いた雰囲気の
                 スペースです。
               </p>
             </div>
@@ -70,18 +67,19 @@ const FloorSection = () => {
               alt="2F テーブル席"
               className="h-full w-full object-cover"
             />
-            <span className="
+            <span
+              className="
                   absolute top-0 right-0
                   -translate-y-2/4
                   text-5xl
                   md:text-6xl font-bold
                   text-[#8C8745] 
-                  text-outline">
+                  text-outline"
+            >
               2F
             </span>
           </div>
         </div>
-        
 
         {/* ===== 3F ===== */}
         <div className="grid items-center grid-cols-[59%_1fr] md:grid-cols-[7.3fr_5fr]">
@@ -106,24 +104,21 @@ const FloorSection = () => {
                 3F
               </span>
             </div>
-
           </div>
 
           {/* テキスト */}
           <div className="flex items-center bg-[#F6F3EE] pl-1 pr-4 md:px-12">
             <div>
-              <h3 className="text-xl md:text-4xl font-semibold text-[#8C8745]">
+              <h3 className="mb-4 text-xl md:text-4xl font-semibold text-[#8C8745]">
                 COWORKING SPACE
               </h3>
               <p className="text-xs md:text-lg leading-relaxed">
-                カフェの落ち着いた雰囲気の中で、
-                勉強や仕事に集中できる
+                カフェの落ち着いた雰囲気の中で、 勉強や仕事に集中できる
                 コワーキングスペースです。
               </p>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import SecondFloorCounter from "./SecondFloorCounter";
 import Greenbar from "../Greenbar";
 import TopFooter from "../Top/TopFooter";
 import TopNav from "../Top/TopNav";
+import TopSNSLinks from "../Top/TopSNSLinks";
 
 const SecondFloorIndex = () => {
   return (
@@ -15,6 +16,7 @@ const SecondFloorIndex = () => {
       <SecondFloorTable />
       <SecondFloorSofa />
       <SecondFloorCounter />
+      <TopSNSLinks />
       <TopFooter />
     </>
   );

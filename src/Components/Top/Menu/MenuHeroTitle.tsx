@@ -2,15 +2,15 @@ type Props = {
   title: string;
 };
 
-const HEADER_HEIGHT = 80;
+const HEADER_HEIGHT = 70;
 
 const MenuHeroTitle = ({ title }: Props) => {
   return (
     <div
-      className="fixed left-0 z-45 pointer-events-none"
+      className="absolute left-0 z-10 pointer-events-none"
       style={{
-        top: HEADER_HEIGHT,
-        height: "20vh",          // Canvas と同じ高さ
+        top: HEADER_HEIGHT + 50, // ← 少し上にしたいならここを調整
+        height: "0vh",
         width: "100%",
       }}
     >

@@ -22,6 +22,7 @@ export { default as FirstFloorSeat2 } from "./FirstFloor_Seat2.jpg";
 export { default as FirstFloorSeat3 } from "./FirstFloor_Seat3.jpg";
 export { default as FirstFloorSeat4 } from "./FirstFloor_Seat4.jpg";
 export { default as FreePaper1 } from "./FreePaper_1.png";
+export { default as SecondFloorKv} from "./SecondFoor_FirstView.png"
 export { default as SecondFloorTable1 } from "./SecondFloor_Table1.png";
 export { default as SecondFloorTable2 } from "./SecondFloor_Table2.png";
 export { default as SecondFloorTable3 } from "./SecondFloor_Table3.png";
