@@ -22,6 +22,12 @@ const Seat = () => {
           <p className="text-base leading-8 text-black">
             1人でゆっくりランチをしたり、作業をされたい方におすすめな横並びのお席です。
           </p>
+          <h2 className="my-5 text-3xl font-semibold tracking-wide text-[#8C8745]">
+            全席充電可能
+          </h2>
+          <p className="text-base leading-8 text-black">
+            全席座席下にコンセントがあり、充電をしながら作業に取り組むことが出来ます。
+          </p>
         </div>
       </div>
 

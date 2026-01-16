@@ -38,7 +38,7 @@ export default function TopNews() {
           return (
             <li
               key={item._id}
-              className="flex flex-col gap-3 py-2 pl-[4%] text-sm md:flex-row md:gap-6 hover:bg-[#F6F4EF]"
+              className="flex flex-col gap-3 py-2 pl-[4%] text-sm md:flex-row md:gap-6 hover:text-[#8C8745]"
             >
               <Link
                 to={`/news/${item.slug.current}`}   // ← } 修正

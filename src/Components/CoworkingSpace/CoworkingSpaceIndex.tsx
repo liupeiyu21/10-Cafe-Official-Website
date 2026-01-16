@@ -5,6 +5,7 @@ import TopFooter from "../Top/TopFooter";
 import Price from "./Price";
 import CWSFirstView from "./CWSFirstView";
 import TopNav from "../Top/TopNav";
+import TopSNSLinks from "../Top/TopSNSLinks";
 
 const CoworkingSpaceIndex = () => {
   return (
@@ -15,6 +16,7 @@ const CoworkingSpaceIndex = () => {
       <About />
       <Price />
       <Manual />
+      <TopSNSLinks />
       <TopFooter />
     </>
   );

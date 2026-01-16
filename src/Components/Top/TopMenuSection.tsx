@@ -5,7 +5,6 @@ const TopMenuSection = () => {
   return (
     <section className="bg-white py-10 md:py-24">
       <div className="mx-auto max-w-4xl md:px-6">
-
         {/* ===== セクションタイトル ===== */}
         <div className="flex items-center gap-4 text-[#8C8745] pb-10">
           <span className="block h-[2px] w-17 bg-[#8C8745]" />
@@ -17,13 +16,8 @@ const TopMenuSection = () => {
 
         {/* ===== メニューカード ===== */}
         <div className="grid md:grid-cols-3">
-
           {/* Food */}
-          <TopMenuCard
-            image={TopMenuFood}
-            label="Food Menu"
-            to="/menu/food"
-          />
+          <TopMenuCard image={TopMenuFood} label="Food Menu" to="/menu/food" />
 
           {/* Drink */}
           <TopMenuCard
@@ -38,7 +32,6 @@ const TopMenuSection = () => {
             label="Take Out"
             to="/menu/takeout"
           />
-
         </div>
       </div>
     </section>

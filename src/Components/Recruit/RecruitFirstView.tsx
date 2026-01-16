@@ -1,10 +1,9 @@
 import { Recruit } from "../../Images";
 const RecruitFirstView = () => {
-    return(
-        <>
+  return (
+    <>
       {/* ===== ヒーロー画像 ===== */}
       <section className="relative w-full h-[220px] md:h-[360px] overflow-hidden ">
-        
         {/* 背景画像 */}
         <img
           src={Recruit}
@@ -24,8 +23,8 @@ const RecruitFirstView = () => {
           </div>
         </div>
       </section>
-      </>
-    )
-}
+    </>
+  );
+};
 
-export default RecruitFirstView
+export default RecruitFirstView;

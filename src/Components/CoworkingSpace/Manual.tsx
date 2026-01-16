@@ -2,7 +2,7 @@ import { ManualCharacter } from "../../Images"; // ← change name if needed
 
 const Manual = () => {
   return (
-    <section className="ml-auto max-w-7xl py-24">
+    <section className="ml-auto max-w-7xl pt-10 md:pt-24">
       <div className="relative rounded-none md:rounded-l-3xl rounded-r-none bg-[#F6F4EF] px-8 py-20 md:px-16">
         {/* Text */}
         <div className="mx-auto max-w-3xl text-center">
