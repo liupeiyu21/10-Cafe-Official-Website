@@ -64,7 +64,14 @@ const TopNav = () => {
                     COFFEE BEANS
                     </Link>
                 </li>
-                <li>RECRUIT</li>
+                <li>
+                    <Link
+                    to="/recruitindex"
+                    className="pb-1 border-b border-transparent hover:border-black transition"
+                    >
+                    RECRUIT
+                    </Link>
+                </li>
                 <li>CONTACT</li>
                 </ul>
 
