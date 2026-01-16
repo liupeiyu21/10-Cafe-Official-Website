@@ -10,6 +10,7 @@ import ScrollToTop from "./Components/Common/ScrollToTop";
 import MenuPage from "./Pages/MenuPage";
 import EventsPage from "./Components/Top/EventsPage";
 import EventDetailPage from "./Components/Top/EventDetailPage";
+import CafeBeansEcIndex from "./Components/CafeBeansEC/CafeBeansEcIndex";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <Route path="/menu/:category" element={<MenuPage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/events/:slug" element={<EventDetailPage />} />
-
+        <Route path="/cafebeansexindex" element={<CafeBeansEcIndex />}></Route>
 
       </Routes>
        <ScrollToTop />

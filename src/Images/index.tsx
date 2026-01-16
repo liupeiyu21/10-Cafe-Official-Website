@@ -37,6 +37,8 @@ export { default as PriceClock3 } from "./Price_Clock3.svg";
 export { default as ManualCharacter } from "./Character.svg";
 export { default as Tophamburger } from "./Tophamburger.png";
 
-export { default as MenuHero } from "./MenuHero.png"
+export { default as MenuHero } from "./MenuHero.png";
 
+export { default as Caffeebeans } from "./Caffeebeans.png"
+ 
 
