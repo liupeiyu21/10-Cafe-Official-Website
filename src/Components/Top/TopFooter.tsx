@@ -14,11 +14,11 @@ const TopFooter = () => {
 
         {/* ナビ */}
         <nav className="mb-12 flex justify-center md:flex">
-          <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm tracking-widest">
+          <ul className="hidden md:flex gap-8 text-sm text-black">
             <li>
               <Link
                 to="/menu/drink"
-                className="pb-1 border-b border-transparent font-medium hover:border-black transition"
+                className="pb-1 border-b border-transparent hover:border-black transition"
               >
                 Menu
               </Link>
@@ -26,7 +26,7 @@ const TopFooter = () => {
             <li>
               <Link
                 to="/firstfloor"
-                className="pb-1 border-b border-transparent font-medium hover:border-black transition"
+                className="pb-1 border-b border-transparent hover:border-black transition"
               >
                 1F
               </Link>
@@ -34,7 +34,7 @@ const TopFooter = () => {
             <li>
               <Link
                 to="/secondfloor"
-                className="pb-1 border-b border-transparent font-medium hover:border-black transition"
+                className="pb-1 border-b border-transparent hover:border-black transition"
               >
                 2F
               </Link>
@@ -42,20 +42,28 @@ const TopFooter = () => {
             <li>
               <Link
                 to="/coworkingspace"
-                className="pb-1 border-b border-transparent font-medium hover:border-black transition"
+                className="pb-1 border-b border-transparent hover:border-black transition"
               >
-                Coworking Space
+                COWORKING SPACE
               </Link>
             </li>
-            <li className="hover:opacity-60 cursor-pointer font-medium">
-              Coffee Beans
+            <li>
+              <Link
+                to="/cafebeansexindex"
+                className="pb-1 border-b border-transparent hover:border-black transition"
+              >
+                COFFEE BEANS
+              </Link>
             </li>
-            <li className="hover:opacity-60 cursor-pointer font-medium">
-              Recruit
+            <li>
+              <Link
+                to="/recruitindex"
+                className="pb-1 border-b border-transparent hover:border-black transition"
+              >
+                RECRUIT
+              </Link>
             </li>
-            <li className="hover:opacity-60 cursor-pointer font-medium">
-              Contact Us
-            </li>
+            <li>CONTACT</li>
           </ul>
         </nav>
 
