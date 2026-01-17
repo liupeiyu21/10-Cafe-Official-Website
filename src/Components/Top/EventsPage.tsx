@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { getEvents } from "../../../lib/sanity";
-import { Logo, Tophamburger } from "../../Images";
+
 import TopSNSLinks from "./TopSNSLinks";
 import TopFooter from "./TopFooter";
 import TopNav from "./TopNav";

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Logo, Tophamburger } from "../../Images";
 import { Link, useParams } from "react-router-dom";
 // import { useParams } from "react-router-dom";
 import { PortableText } from "@portabletext/react";
@@ -11,7 +10,7 @@ import TopNav from "./TopNav";
 // import TopAccessSection from "./TopAccessSection";
 
 const TopNewsDetail = () => {
-  const [isOpen, setIsOpen] = useState(false);
+
   const { slug } = useParams();
   const [news, setNews] = useState<any>(null);
 

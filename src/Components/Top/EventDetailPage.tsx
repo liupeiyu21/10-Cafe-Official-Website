@@ -20,7 +20,7 @@ type Event = {
 const EventDetailPage = () => {
   const { slug } = useParams();
   const [event, setEvent] = useState<Event | null>(null);
-  const [isOpen, setIsOpen] = useState(false);
+
 
   useEffect(() => {
     if (!slug) return;

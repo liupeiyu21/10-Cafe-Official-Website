@@ -9,7 +9,7 @@ import TopSeasonalSection from "./TopSeasonalSection";
 import TopAccessSection from "./TopAccessSection";
 import TopSNSLink from "./TopSNSLinks";
 import TopNav from "./TopNav";
-import ScrollTopCharacter from "../ScrollTopCharacter"
+
 
 
 const TopIndex = () => {
