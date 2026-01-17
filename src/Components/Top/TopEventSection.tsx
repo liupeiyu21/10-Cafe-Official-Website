@@ -79,7 +79,8 @@ const TopEventSection = () => {
            >
             <button
               className="
-                mt-16
+                mt-10
+                md:mt-16
                 mx-auto
                 block
                 px-10

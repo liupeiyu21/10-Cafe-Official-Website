@@ -68,7 +68,14 @@ const MenuHero = () => {
                 RECRUIT
               </Link>
             </li>
-            <li>CONTACT</li>
+            <li>
+              <Link
+                to="/contactpageindex"
+                className="pb-1 border-b border-transparent hover:border-b-3 hover:border-black transition"
+              >
+                CONTACT US
+              </Link>
+            </li>
           </ul>
 
           {/* ハンバーガー */}
@@ -156,11 +163,11 @@ const MenuHero = () => {
             </li>
             <li className="text-white">
               <Link
-                to="/contact"
+                to="/contactpageindex"
                 onClick={() => setIsOpen(false)}
                 className="font-bold"
               >
-                CONTACT
+                CONTACT US
               </Link>
             </li>
           </ul>

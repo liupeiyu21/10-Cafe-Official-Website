@@ -67,7 +67,14 @@ const TopNav = () => {
                 RECRUIT
               </Link>
             </li>
-            <li>CONTACT</li>
+            <li>
+              <Link
+                to="/contactpageindex"
+                className="pb-1 border-b border-transparent hover:border-b-3 hover:border-black transition"
+              >
+                CONTACT US
+              </Link>
+            </li>
           </ul>
 
           {/* ===== ハンバーガー（SP） ===== */}
@@ -98,7 +105,7 @@ const TopNav = () => {
         <div
           className={`md:hidden absolute top-full left-0 w-full bg-[#D8C7A9]
                 overflow-hidden transition-all duration-300 rounded-b-2xl
-                ${isOpen ? "max-h-[520px] py-6" : "max-h-0 py-0"}`}
+                ${isOpen ? "max-h-[540px] py-6" : "max-h-0 py-0"}`}
         >
           <ul className="flex flex-col gap-6 pl-[10%] text-sm">
             <li>
@@ -157,11 +164,11 @@ const TopNav = () => {
             </li>
             <li>
               <Link
-                to="/contact"
+                to="/contactpageindex"
                 onClick={() => setIsOpen(false)}
                 className="font-bold text-white"
               >
-                CONTACT
+                CONTACT US
               </Link>
             </li>
           </ul>

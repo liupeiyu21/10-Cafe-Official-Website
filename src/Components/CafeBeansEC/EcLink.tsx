@@ -2,7 +2,7 @@ import { Caffeebeans } from "../../Images";
 
 const EcLink = () => {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-16">
+    <section className="mx-auto max-w-5xl px-6 pt-16 md:py-16">
       <h3 className="text-2xl text-center pb-10 md:py-20  md:text-4xl font-semibold mb-4">
         店頭・オンライン購入
       </h3>
