@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { getNewsList, getNewsCount } from "../../../lib/sanity";
 import TopFooter from "./TopFooter";
 import TopSNSLinks from "./TopSNSLinks";
-import { Logo, Tophamburger } from "../../Images";
+// import { Logo, Tophamburger } from "../../Images";
 import TopNav from "./TopNav";
 
 type NewsItem = {

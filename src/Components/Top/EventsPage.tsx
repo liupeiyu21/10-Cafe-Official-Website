@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { getEvents } from "../../../lib/sanity";
-import { Logo, Tophamburger } from "../../Images";
+// import { Logo, Tophamburger } from "../../Images";
 import TopSNSLinks from "./TopSNSLinks";
 import TopFooter from "./TopFooter";
 import TopNav from "./TopNav";
@@ -15,7 +15,7 @@ const EventsPage = () => {
 
   const [events, setEvents] = useState<any[]>([]);
   const [total, setTotal] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     getEvents(page, PER_PAGE).then((res) => {

@@ -1,6 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Seasonal1, Seasonal2, Seasonal3, Seasonal4 } from "../../Images";
+// import { Seasonal1, Seasonal2, Seasonal3, Seasonal4 } from "../../Images";
 import { Navigation, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
 // @ts-ignore
