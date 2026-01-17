@@ -5,7 +5,6 @@ const TopAccessSection = () => {
   <h2 className="text-center text-white text-xl md:text-4xl tracking-widest mb-10 md:mb-16">
     ACCESS
   </h2>
-
   <div className="relative max-w-6xl mx-auto grid md:grid-cols-[2fr_1fr] gap-10 px-6">
 
     {/* 地図 */}
@@ -26,11 +25,11 @@ const TopAccessSection = () => {
     shadow-2xl
     w-[300px] md:w-[330px]
     md:rotate-15
-    absolute md:top-30 md:right-15
+    absolute md:top-15 left-[10%] md:left-[0%]  md:right-15
     ">
 
     {/* テープ */}
-    <div className="
+      <div className="
         absolute
         -top-8
         left-1/2
@@ -45,26 +44,26 @@ const TopAccessSection = () => {
     " />
 
     {/* 中身 */}
-    <h3 className="font-bold text-lg mb-2">アクセス</h3>
-    <p className="mb-3">高田馬場駅から徒歩3分</p>
+      <h3 className="font-bold text-lg mb-2">アクセス</h3>
+      <p className="mb-3">高田馬場駅から徒歩3分</p>
 
-    <h4 className="font-bold">営業時間</h4>
+      <h4 className="font-bold">営業時間</h4>
 
-    <div className="mt-6 space-y-3 text-sm leading-relaxed">
-        <p className="font-semibold">CAFE</p>
-        <p>【月〜木】9:00〜20:30（L.O.20:00）</p>
-        <p>【金・土】9:00〜23:30（L.O.23:00）</p>
-        <p>【日】11:00〜21:00（L.O.20:00）</p>
+      <div className="mt-6 space-y-3 text-sm leading-relaxed">
+          <p className="font-semibold">CAFE</p>
+          <p>【月〜木】9:00〜20:30（L.O.20:00）</p>
+          <p>【金・土】9:00〜23:30（L.O.23:00）</p>
+          <p>【日】11:00〜21:00（L.O.20:00）</p>
 
-        <p className="font-semibold mt-4">SPACE</p>
-        <p>【月〜木】9:00〜20:30（L.O.20:00）</p>
-        <p>【金・土】9:00〜23:30（L.O.23:00）</p>
-        <p>【日】11:00〜21:00（L.O.20:00）</p>
-    </div>
+          <p className="font-semibold mt-4">SPACE</p>
+          <p>【月〜木】9:00〜20:30（L.O.20:00）</p>
+          <p>【金・土】9:00〜23:30（L.O.23:00）</p>
+          <p>【日】11:00〜21:00（L.O.20:00）</p>
+      </div>
 
-    <p className="mt-10 text-sm text-gray-500">
+      <p className="mt-10 text-sm text-gray-500">
         〒171-0033 東京都豊島区高田3丁目12-8
-    </p>
+      </p>
     </div>
 
   </div>

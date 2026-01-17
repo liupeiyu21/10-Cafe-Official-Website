@@ -63,12 +63,19 @@ const TopFooter = () => {
                 RECRUIT
               </Link>
             </li>
-            <li className="hover:opacity-60 cursor-pointer">CONTACT US</li>
+            <li>
+              <Link
+                to="/contactpageindex"
+                className="pb-1 border-b border-transparent hover:border-b-3 hover:border-black transition"
+              >
+                CONTACT US
+              </Link>
+            </li>
           </ul>
         </nav>
 
         {/* 下段 */}
-        <div className="flex flex-col gap-4 border-t border-black/10 pt-6 text-xs md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-4 border-t border-black/10 pt-6 text-xs text-center md:flex-row md:items-center md:justify-between">
           <p>〒171-0033 東京都豊島区高田3丁目12-8 03-6912-6109</p>
           <p>Copyright © 10°CAFE | 高田馬場 All Rights Reserved.</p>
         </div>

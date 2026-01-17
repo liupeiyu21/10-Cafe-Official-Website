@@ -1,13 +1,13 @@
 import { PriceClock1, PriceClock2, PriceClock3 } from "../../Images";
 const Price = () => {
   return (
-    <section className="mx-auto max-w-6xl px-5 py-20">
+    <section className="mx-auto max-w-6xl px-5 md:py-20">
       {/* ===== Price ===== */}
       <h2 className="mb-16 text-center text-3xl font-semibold tracking-widest text-[#8C8745]">
         料金
       </h2>
 
-      <div className="mb-32 grid grid-cols-1 gap-10 md:grid-cols-3">
+      <div className="mb-16 md:mb-32 grid grid-cols-1 gap-10 md:grid-cols-3">
         {/* Card 1 */}
         <div
           className="

@@ -2,12 +2,12 @@ import { Caffeebeans } from "../../Images";
 
 const EcLink = () => {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-16">
+    <section className="mx-auto max-w-5xl px-6 pt-16 md:py-16">
       <h3 className="text-2xl text-center pb-10 md:py-20  md:text-4xl font-semibold mb-4">
         店頭・オンライン購入
       </h3>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-[320px_1fr] items-start">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-[40%_1fr] items-start">
         {/* 左：画像 */}
         <div className="overflow-hidden rounded-2xl">
           <img
@@ -19,7 +19,7 @@ const EcLink = () => {
 
         {/* 右：テキスト */}
         <div className="mx-auto text-center md:text-start flex flex-col h-full">
-          <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-6 text-start">
+          <p className="text-base md:text-lg leading-relaxed text-gray-700 mb-6 text-start">
             そんなこだわりのコーヒーをご自宅でもお楽しみいただけるように、
             店頭では1,800円、オンラインでは2,000円で販売しております。
             こだわりのコーヒーをぜひ10°cafeで、そしてご自宅でもお楽しみください。

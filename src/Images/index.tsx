@@ -42,5 +42,6 @@ export { default as MenuHero } from "./MenuHero.png";
 
 export { default as Caffeebeans } from "./Caffeebeans.png"
 export { default as Recruit } from "./Recruit.jpg"
+export { default as ScrollCharacter } from "./ScrollCharacter.png"
  
 

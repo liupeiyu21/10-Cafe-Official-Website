@@ -12,6 +12,9 @@ import EventsPage from "./Components/Top/EventsPage";
 import EventDetailPage from "./Components/Top/EventDetailPage";
 import CafeBeansEcIndex from "./Components/CafeBeansEC/CafeBeansEcIndex";
 import RecruitIndex from "./Components/Recruit/RecruitIndex";
+import ContactPageIndex from "./Components/ContactPage/ContactPageIndex";
+import PrivacyPolicyPage from "./Components/ContactPage/PrivacyPolicyPage";
+
 
 function App() {
   return (
@@ -28,6 +31,8 @@ function App() {
         <Route path="/events/:slug" element={<EventDetailPage />} />
         <Route path="/cafebeansexindex" element={<CafeBeansEcIndex />}></Route>
         <Route path="/recruitindex" element={<RecruitIndex />}></Route>
+        <Route path="/contactpageindex" element={<ContactPageIndex />}></Route>
+        <Route path="/privacy" element={<PrivacyPolicyPage />} />
       </Routes>
       <ScrollToTop />
     </>
